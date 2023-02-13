@@ -12,20 +12,31 @@
     "@types/react-dom": "^18.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
+    "sass": "^1.58.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:prod": "react-scripts test --watchAll --coverage --watchAll=false",
+    "test": "react-scripts test --coverage",
+    "sass": "sass sass:css --watch",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/reportWebVitals.ts",
+      "<rootDir>/src/index.ts"
     ]
   },
   "browserslist": {
@@ -39,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "husky": "^8.0.0"
   }
 }
