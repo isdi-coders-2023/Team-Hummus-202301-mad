@@ -1,9 +1,17 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
+import { Header } from "../header/header";
+import { Footer } from "../footer/footer";
 import App from "./App";
 
-test("renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock("../header/header");
+jest.mock("../footer/footer");
+
+describe("Given App component", () => {
+  describe("When it is rendered", () => {
+    test("Then it should call Header and Footer components", () => {
+      render(<App />);
+      expect(Header).toHaveBeenCalled();
+      expect(Footer).toHaveBeenCalled();
+    });
+  });
 });
