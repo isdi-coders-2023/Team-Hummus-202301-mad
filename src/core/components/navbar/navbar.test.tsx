@@ -5,7 +5,7 @@ describe("Given Navbar component", () => {
   describe("When it is rendered", () => {
     test("Then menu should be in the screen", () => {
       render(<Navbar></Navbar>);
-      const element = screen.getByText("Home");
+      const element = screen.getByRole("img");
       expect(element).toBeInTheDocument();
     });
   });
