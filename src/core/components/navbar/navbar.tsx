@@ -1,11 +1,12 @@
 import "./navbar.scss";
+import { slide as Menu } from "react-burger-menu";
 
 export const Navbar = () => {
   return (
-    <nav>
+    <Menu>
       <img className="burger-menu" src="/images/menu.png" alt="" />
       <NavbarList></NavbarList>
-    </nav>
+    </Menu>
   );
 };
 
