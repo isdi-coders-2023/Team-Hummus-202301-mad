@@ -16,4 +16,114 @@ export const MOCK_Characters: CharacterStructure[] = [
     img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
     isFavourite: true,
   },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Paco",
+    img: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    isFavourite: false,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Paco",
+    img: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    isFavourite: false,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Paco",
+    img: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    isFavourite: false,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Paco",
+    img: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    isFavourite: false,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Paco",
+    img: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    isFavourite: false,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Paco",
+    img: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    isFavourite: false,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
+  {
+    name: "Paco",
+    img: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    isFavourite: false,
+  },
+  {
+    name: "Pepo",
+    img: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    isFavourite: true,
+  },
 ];
