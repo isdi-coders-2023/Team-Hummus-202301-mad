@@ -3,7 +3,7 @@ import "./navbar.scss";
 export const Navbar = () => {
   return (
     <nav>
-      <img className="burger-menu" src="/images/menu.png" alt="" />
+      <img className="burger-menu" src="/img/menu.png" alt="" />
       <NavbarList></NavbarList>
     </nav>
   );
