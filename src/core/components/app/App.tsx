@@ -1,19 +1,15 @@
 import React from "react";
-import { Home } from "../../../features/home/home";
 import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
-import { Route } from "react-router-dom";
+import { AppRouter } from "../app.router/app.router";
 import "./App.scss";
-import { About } from "../../../features/about/about";
-import { Instructions } from "../../../features/how.to.use/instructions";
-import { Routes } from "react-router";
 
 export type MenuOption = {
   label: string;
   path: string;
 };
 
-const menuOptions: MenuOption[] = [
+export const menuOptions: MenuOption[] = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "How to", path: "/howto" },
