@@ -10,6 +10,6 @@ export type ProtoCardStructure = {
   type: string;
   gender: string;
   location: string;
-}
+};
 
-export type CardStructure = isFavourite & ProtoCardStructure
+export type CardStructure = isFavourite & ProtoCardStructure;
