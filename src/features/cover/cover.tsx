@@ -5,10 +5,12 @@ export const Cover = () => {
     <div className="cover">
       <div className="cover-info">
         <h2 className="cover-info__welcome">
-          <span className="span-welcome">Welcome</span> to the Rick and morty
-          character fanpage.
+          <p>
+            <span className="span-welcome">Welcome</span> to the Rick and morty
+            character fanpage.
+          </p>
         </h2>
-        <p>
+        <p className="cover-info__p">
           Explore each character presented in the series. Check out their
           information and create whatever comes in your imagination.
         </p>
@@ -19,16 +21,20 @@ export const Cover = () => {
             id=""
             className="cover-info__searchbar"
           />
-          <img src="/img/arrow-small-right.png" alt="" />
+          <img
+            src="/img/arrow-small-right.png"
+            alt=""
+            className="cover-info__arrow"
+          />
         </div>
-        <p>Properties you can filter:</p>
-        <p>
+        <p className="cover-info__properties">Properties you can filter:</p>
+        <p className="cover-info__properties">
           name, status (alive, dead or unknown), species, gender (male, female,
           genderless, unknown)
         </p>
       </div>
       <div>
-        <img src="/img/wallpapersden 1.png" alt="" />
+        <img className="cover__img" src="/img/wallpapersden 1.png" alt="" />
       </div>
     </div>
   );

@@ -1,18 +1,37 @@
 .cover {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding-top: 4rem;
+  &__img {
+    width: 35rem;
+  }
 }
+.cover-info {
+  .span-welcome {
+    color: #d5e56f;
+  }
+  &__search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
-.span-welcome {
-  color: D5E56F;
-}
-.cover-info__search {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.cover-info__searchbar {
-  max-height: 1.3rem;
+  &__searchbar {
+    max-height: 1.3rem;
+  }
+  &__p {
+    padding-top: 3rem;
+    color: white;
+  }
+  &__searchbar {
+    border-radius: 4rem;
+    min-height: 2rem;
+    padding: 1rem;
+  }
+  &__arrow {
+    width: 7.5rem;
+  }
+  &__properties {
+    color: #d5e56f;
+  }
 }
