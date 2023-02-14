@@ -1,3 +1,36 @@
 .burger-menu {
   width: 2.5rem;
 }
+.navbar-list {
+  display: none;
+  list-style: none;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .burger-menu {
+    display: none;
+  }
+  .navbar-list {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+  }
+  li:nth-child(4) {
+    overflow: hidden;
+    font-family: "Arial";
+    font-size: 0.7rem;
+    background: none;
+    cursor: pointer;
+    padding: 10px 40px;
+    display: inline-block;
+    text-transform: uppercase;
+    outline: none;
+    position: relative;
+    transition: all 0.3s;
+    border-radius: 4rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #b2df28 0%, #d3daa7 100%);
+    color: black;
+  }
+}
