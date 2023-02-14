@@ -8,6 +8,18 @@ import { About } from "../../../features/about/about";
 import { Instructions } from "../../../features/how.to.use/instructions";
 import { Routes } from "react-router";
 
+export type MenuOption = {
+  label: string;
+  path: string;
+};
+
+const menuOptions: MenuOption[] = [
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "How to", path: "/howto" },
+  { label: "Favorites", path: "/favorites" },
+];
+
 function App() {
   return (
     <div className="App">

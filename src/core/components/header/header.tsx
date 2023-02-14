@@ -1,4 +1,3 @@
-import { Navbar } from "../navbar/navbar";
 import "./header.scss";
 
 export function Header() {
@@ -7,7 +6,6 @@ export function Header() {
       <div className="app-header__logo">
         <img src="img\logo_rick_and_morty.svg" alt="logo" />
       </div>
-      <Navbar></Navbar>
     </header>
   );
 }

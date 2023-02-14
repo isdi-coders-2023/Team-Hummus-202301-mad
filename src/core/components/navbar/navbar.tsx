@@ -1,29 +1,20 @@
 import "./navbar.scss";
-import { Link } from "react-router-dom";
-export const Navbar = () => {
+import { MenuOption } from "../app/App";
+
+type NavProps = {
+  options: MenuOption[];
+};
+export function Navbar({ options }: NavProps) {
   return (
     <nav>
       <img className="burger-menu" src="/img/menu.png" alt="" />
-      <NavbarList></NavbarList>
+      <ul className="navbar-list">
+        {options.map((item) => (
+          <li key={item.label} className="navbar-list__home">
+            <a href={item.path}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
-};
-
-const NavbarList = () => {
-  return (
-    <ul className="navbar-list">
-      <li className="navbar-list__home">
-        <Link to="/">Home</Link>
-      </li>
-      <li className="navbar-list__howto">
-        <Link to="/howto">How to</Link>
-      </li>
-      <li className="navbar-list__about">
-        <Link to="/about">About</Link>
-      </li>
-      <li className="navbar-list__favorites">
-        <Link to="/favorites">Favorites</Link>
-      </li>
-    </ul>
-  );
-};
+}
