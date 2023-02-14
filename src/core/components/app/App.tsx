@@ -3,6 +3,7 @@ import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
 import { AppRouter } from "../app.router/app.router";
 import "./App.scss";
+import { Navbar } from "../navbar/navbar";
 
 export type MenuOption = {
   label: string;
@@ -19,12 +20,10 @@ export const menuOptions: MenuOption[] = [
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/about" element={<About></About>}></Route>
-        <Route path="/howto" element={<Instructions></Instructions>}></Route>
-      </Routes>
+      <Header>
+        <Navbar menuOptions={menuOptions}></Navbar>
+      </Header>
+      <AppRouter menuOptions={menuOptions}></AppRouter>
       <Footer></Footer>
     </div>
   );
