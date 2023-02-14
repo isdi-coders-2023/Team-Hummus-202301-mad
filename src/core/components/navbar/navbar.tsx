@@ -1,11 +1,21 @@
 import "./navbar.scss";
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
-    <div>
+    <nav>
       <img className="burger-menu" src="/images/menu.png" alt="" />
-    </div>
+      <NavbarList></NavbarList>
+    </nav>
   );
 };
 
-export default Navbar;
+const NavbarList = () => {
+  return (
+    <ul className="navbar-list">
+      <li className="navbar-list__home">Home</li>
+      <li className="navbar-list__howto">How to</li>
+      <li className="navbar-list__about">About</li>
+      <li className="navbar-list__favorites">Favorites</li>
+    </ul>
+  );
+};
