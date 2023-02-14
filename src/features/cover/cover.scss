@@ -1,0 +1,46 @@
+.cover {
+  background-image: url("../../../public/img/wallpapersden\ 1.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.cover {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 4rem;
+  &__img {
+    width: 35rem;
+  }
+}
+.cover-info {
+  &__1p {
+    color: white;
+  }
+  .span-welcome {
+    color: #d5e56f;
+  }
+  &__search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__searchbar {
+    max-height: 1.3rem;
+  }
+  &__p {
+    padding-top: 3rem;
+    color: white;
+  }
+  &__searchbar {
+    border-radius: 4rem;
+    min-height: 2rem;
+    padding: 1rem;
+  }
+  &__arrow {
+    width: 7.5rem;
+  }
+  &__properties {
+    color: #d5e56f;
+  }
+}
