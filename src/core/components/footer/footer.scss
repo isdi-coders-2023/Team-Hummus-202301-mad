@@ -39,3 +39,29 @@
     font-family: $font-1;
   }
 }
+
+@media (min-width: 600px) {
+  .footer {
+    padding: $padding;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10rem;
+    &__logo {
+      img {
+        width: 30rem;
+      }
+    }
+    &__p {
+      font-size: 1rem;
+    }
+    &__hummus-title {
+      font-size: 2rem;
+    }
+    &__names {
+      padding-top: 2rem;
+      font-size: 1.2rem;
+      gap: 10rem;
+    }
+  }
+}
