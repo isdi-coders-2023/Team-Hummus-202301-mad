@@ -1,4 +1,10 @@
 .cover {
+  background-image: url("../../../public/img/wallpapersden\ 1.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.cover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 4rem;
@@ -7,6 +13,9 @@
   }
 }
 .cover-info {
+  &__1p {
+    color: white;
+  }
   .span-welcome {
     color: #d5e56f;
   }

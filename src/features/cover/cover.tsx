@@ -5,8 +5,8 @@ export const Cover = () => {
     <div className="cover">
       <div className="cover-info">
         <h2 className="cover-info__welcome">
-          <p>
-            <span className="span-welcome">Welcome</span> to the Rick and morty
+          <p className="cover-info__1p">
+            <span className="span-welcome">Welcome</span> to the Rick and Morty
             character fanpage.
           </p>
         </h2>
@@ -32,9 +32,6 @@ export const Cover = () => {
           name, status (alive, dead or unknown), species, gender (male, female,
           genderless, unknown)
         </p>
-      </div>
-      <div>
-        <img className="cover__img" src="/img/wallpapersden 1.png" alt="" />
       </div>
     </div>
   );
