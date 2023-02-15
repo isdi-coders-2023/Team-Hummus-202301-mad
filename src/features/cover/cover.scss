@@ -28,9 +28,13 @@
   padding: 3.5rem;
   padding-bottom: 4rem;
   &__1p {
+    @media (min-width: 600px) {
+      align-items: baseline;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     font-family: $font-1;
     font-weight: 900;
     color: white;
