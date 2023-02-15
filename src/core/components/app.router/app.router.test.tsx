@@ -8,21 +8,46 @@ describe("Given AppRouter component", () => {
   const mockOptions: MenuOption[] = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
-    { label: "To do", path: "/instructions" },
+    { label: "To do", path: "/howto" },
   ];
   describe("When rendering and the path is '/'", () => {
     test("Then, the title 'Welcome to the Rick and Morty' from Home should be in the screen", async () => {
       render(
-        <Router
-          initialEntries={["/", "/about", "/instructions"]}
-          initialIndex={0}
-        >
+        <Router initialEntries={["/", "/about", "/howto"]} initialIndex={0}>
           <AppRouter menuOptions={mockOptions}></AppRouter>
         </Router>
       );
 
       const element = await screen.findByRole("heading", {
         name: "Welcome to the Rick and Morty character fanpage.",
+      });
+      expect(element).toBeInTheDocument();
+    });
+  });
+  describe("When rendering and the path is '/about'", () => {
+    test("Then, the title 'What is this site for?' from Home should be in the screen", async () => {
+      render(
+        <Router initialEntries={["/", "/about", "/howto"]} initialIndex={1}>
+          <AppRouter menuOptions={mockOptions}></AppRouter>
+        </Router>
+      );
+
+      const element = await screen.findByRole("heading", {
+        name: "What is this site for?",
+      });
+      expect(element).toBeInTheDocument();
+    });
+  });
+  describe("When rendering and the path is '/howto'", () => {
+    test("Then, the title 'How to use?' from Home should be in the screen", async () => {
+      render(
+        <Router initialEntries={["/", "/about", "/howto"]} initialIndex={2}>
+          <AppRouter menuOptions={mockOptions}></AppRouter>
+        </Router>
+      );
+
+      const element = await screen.findByRole("heading", {
+        name: "How to use?",
       });
       expect(element).toBeInTheDocument();
     });
