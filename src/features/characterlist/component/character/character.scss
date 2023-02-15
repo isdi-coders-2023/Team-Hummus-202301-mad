@@ -17,7 +17,7 @@
     border-radius: 0.5rem 0.5rem 0 0;
     border-bottom: 1px solid black;
 
-    @media (max-width: 600px) {
+    @media (min-width: 600px) {
       width: 10rem;
     }
   }
@@ -50,16 +50,16 @@
 
   &__fav_btn--active {
     position: relative;
-    left: -3.6rem;
-    top: 1.5rem;
+    left: -4.4rem;
+    top: 2.5rem;
 
     background-color: transparent;
     border: none;
     cursor: pointer;
 
     @media (min-width: 600px) {
-      left: -4.4rem;
-      top: 2.5rem;
+      left: -3.6rem;
+      top: 1.5rem;
     }
 
     &__img {
@@ -72,15 +72,16 @@
   }
   &__fav_btn--hidden {
     position: relative;
-    left: -4.4rem;
-    top: 2.5rem;
+    left: -3.6rem;
+    top: 1.5rem;
+
     background-color: transparent;
     border: none;
     cursor: pointer;
 
-    @media (max-width: 600px) {
-      left: -3.6rem;
-      top: 1.5rem;
+    @media (min-width: 600px) {
+      left: -4.4rem;
+      top: 2.5rem;
     }
   }
   &__fav_action__img {

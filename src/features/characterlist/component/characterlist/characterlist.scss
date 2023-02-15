@@ -12,9 +12,13 @@ $size-2: 10rem;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 
-    @media (min-width: 1000px) {
-      grid-template-rows: $size-1 $size-1 $size-1 $size-1;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    @media (min-width: 500px) {
+      grid-template-rows: $size-2 $size-2 $size-2 $size-2 $size-2 $size-2 $size-2;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (min-width: 600px) {
+      grid-template-rows: $size-1 $size-1 $size-1 $size-1 $size-1 $size-1;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 2rem;
     }
     @media (min-width: 800px) {
@@ -22,13 +26,11 @@ $size-2: 10rem;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 2rem;
     }
-    @media (min-width: 600px) {
-      grid-template-rows: $size-1 $size-1 $size-1 $size-1 $size-1 $size-1;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    @media (min-width: 500px) {
-      grid-template-rows: $size-2 $size-2 $size-2 $size-2 $size-2 $size-2 $size-2;
-      grid-template-columns: 1fr 1fr 1fr;
+
+    @media (min-width: 1000px) {
+      grid-template-rows: $size-1 $size-1 $size-1 $size-1;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 2rem;
     }
   }
 }
