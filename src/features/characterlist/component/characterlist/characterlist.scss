@@ -9,27 +9,25 @@ $size-2: 10rem;
   &__character {
     display: grid;
     gap: 2rem;
+    grid-template-rows: $size-2 $size-2 $size-2 $size-2 $size-2 $size-2 $size-2;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 
     @media (min-width: 1000px) {
       grid-template-rows: $size-1 $size-1 $size-1 $size-1;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
-    @media ((min-width: 800px) and (max-width: 1000px)) {
+    @media (min-width: 800px) {
       grid-template-rows: $size-1 $size-1 $size-1 $size-1 $size-1;
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    @media ((min-width: 600px) and (max-width: 800px)) {
+    @media (min-width: 600px) {
       grid-template-rows: $size-1 $size-1 $size-1 $size-1 $size-1 $size-1;
       grid-template-columns: 1fr 1fr 1fr;
     }
-    @media ((min-width: 500px) and (max-width: 600px)) {
+    @media (min-width: 500px) {
       grid-template-rows: $size-2 $size-2 $size-2 $size-2 $size-2 $size-2 $size-2;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 1rem;
-    }
-    @media (max-width: 500px) {
-      grid-template-rows: $size-2 $size-2 $size-2 $size-2 $size-2 $size-2 $size-2;
-      grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
   }
