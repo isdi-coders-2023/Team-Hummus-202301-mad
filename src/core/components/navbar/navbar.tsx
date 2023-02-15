@@ -1,21 +1,20 @@
 import "./navbar.scss";
+import { MenuOption } from "../app/App";
 
-export const Navbar = () => {
+type NavProps = {
+  menuOptions: MenuOption[];
+};
+export function Navbar({ menuOptions }: NavProps) {
   return (
     <nav>
       <img className="burger-menu" src="/img/menu.png" alt="" />
-      <NavbarList></NavbarList>
+      <ul className="navbar-list">
+        {menuOptions.map((item) => (
+          <li key={item.label} className="navbar-list__home">
+            <a href={item.path}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
-};
-
-const NavbarList = () => {
-  return (
-    <ul className="navbar-list">
-      <li className="navbar-list__home">Home</li>
-      <li className="navbar-list__howto">How to</li>
-      <li className="navbar-list__about">About</li>
-      <li className="navbar-list__favorites">Favorites</li>
-    </ul>
-  );
-};
+}
