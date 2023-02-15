@@ -5,6 +5,7 @@ import App from "./App";
 
 jest.mock("../header/header");
 jest.mock("../footer/footer");
+jest.mock("../app.router/app.router");
 
 describe("Given App component", () => {
   describe("When it is rendered", () => {

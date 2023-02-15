@@ -1,5 +1,5 @@
 import { Cover } from "../cover/cover";
 
-export const Home = () => {
+export default function Home() {
   return <Cover></Cover>;
-};
+}
