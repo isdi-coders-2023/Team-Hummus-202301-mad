@@ -3,6 +3,14 @@
 .cover {
   display: flex;
   flex-direction: column;
+  @media (min-width: 600px) {
+    flex-direction: row-reverse;
+    background-image: url(../../../public/img/cover.png);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    resize: both;
+  }
 
   &__m-image {
     height: 23rem;
@@ -10,6 +18,9 @@
     background-image: url(../../../public/img/m-cover.png);
     background-repeat: no-repeat;
     background-position: right top;
+    @media (min-width: 600px) {
+      background-image: none;
+    }
     background-size: cover;
   }
 }
@@ -17,9 +28,13 @@
   padding: 3.5rem;
   padding-bottom: 4rem;
   &__1p {
+    @media (min-width: 600px) {
+      align-items: baseline;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     font-family: $font-1;
     font-weight: 900;
     color: white;
@@ -30,6 +45,9 @@
     font-size: 2rem;
   }
   &__search1 {
+    @media (min-width: 600px) {
+      display: none;
+    }
     padding: 0rem 0rem 2rem;
     display: flex;
     flex-direction: row;
@@ -44,6 +62,19 @@
   }
   &__search2 {
     display: none;
+    @media (min-width: 600px) {
+      padding: 0rem 0rem 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      button {
+        padding: 1rem;
+        border-radius: 30px;
+        border: none;
+        background-color: $logo-bg;
+      }
+    }
   }
 
   &__searchbar {
@@ -55,14 +86,21 @@
   }
   &__p {
     display: none;
-    padding-top: 3rem;
-    color: white;
+    @media (min-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+      color: white;
+    }
   }
   &__arrow {
     width: 7.5rem;
   }
   &__properties {
     display: none;
+    @media (min-width: 600px) {
+      display: initial;
+    }
     color: #d5e56f;
   }
 }
