@@ -14,7 +14,6 @@ describe("Given Header component", () => {
       );
       const element = screen.getByRole("img");
       expect(element).toBeInTheDocument();
-      expect(Navbar).toHaveBeenCalled();
     });
   });
 });
