@@ -5,10 +5,8 @@ export const Cover = () => {
     <div className="cover">
       <div className="cover-info">
         <h2 className="cover-info__welcome">
-          <p className="cover-info__1p">
-            <span className="span-welcome">Welcome</span> to the Rick and Morty
-            character fanpage.
-          </p>
+          <span className="span-welcome">Welcome </span>
+          to the Rick and Morty character fanpage.
         </h2>
         <p className="cover-info__p">
           Explore each character presented in the series. Check out their

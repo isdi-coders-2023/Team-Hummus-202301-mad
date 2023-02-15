@@ -4,7 +4,7 @@ import { Suspense, lazy } from "react";
 const Home = lazy(() => import("../../../features/home/home"));
 const About = lazy(() => import("../../../features/about/about"));
 const HowTo = lazy(() => import("../../../features/how.to.use/instructions"));
-/* const Favorites = lazy(() => import("../../../features/about/about"));*/
+/* const Favorites = lazy(() => import("../../../features/favorites/favorites"));*/
 
 type AppRouterProps = {
   menuOptions: MenuOption[];
