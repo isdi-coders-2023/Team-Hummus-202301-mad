@@ -5,8 +5,9 @@ export type CharacterStructure = {
 };
 
 export class Character implements CharacterStructure {
-  public isFavourite: boolean;
-  constructor(public name: string, public img: string) {
-    this.isFavourite = false;
-  }
+  constructor(
+    public name: string,
+    public img: string,
+    public isFavourite: boolean
+  ) {}
 }

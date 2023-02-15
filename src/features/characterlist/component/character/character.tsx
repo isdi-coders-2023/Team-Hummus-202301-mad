@@ -1,18 +1,50 @@
 import { CharacterStructure } from "../model/character";
-
+import "./character.scss";
 type CharacterProps = {
   char: CharacterStructure;
 };
 
 export function Character({ char }: CharacterProps) {
-  return (
-    <li className="character__colum">
-      <div className="character_card">
-        <button className="character_card__fav_action">fav-icon</button>
-        <img className="character_card__img" src={char.img} alt={char.name} />
+  //Activar esta función cuando tengamos contexto
+  /* const handleFav = (current: boolean) => {
+    char.isFavourite = !current;
+    console.log(char);
+  }; */
 
-        <div className="character__char__info">
-          <h2 className="character_card">{char.name}</h2>
+  return (
+    <li className="character-colum">
+      <div className="character-card">
+        {
+          //Implementar botones cuando tengamos contexto
+          /* {char.isFavourite && (
+          <button
+            className="character-card__fav_btn--active"
+            onClick={() => handleFav(char.isFavourite)}
+          >
+            <img
+              className="character-card__fav_action__img"
+              src="img\button-fav-active.png"
+              alt="fav-button"
+            ></img>
+          </button>
+        )}
+
+        {!char.isFavourite && (*/
+          <button
+            className="character-card__fav_btn--hidden"
+            /* onClick={() => handleFav(char.isFavourite)} */
+          >
+            <img
+              className="character-card__fav_action__img"
+              src="img\button-fav.png"
+              alt="fav-button"
+            ></img>
+          </button> /*
+        )} */
+        }
+        <img className="character-card__img" src={char.img} alt={char.name} />
+        <div className="character-card__info">
+          <h2 className="character-card__info__name">{char.name}</h2>
         </div>
       </div>
     </li>

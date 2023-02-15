@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
 import { AppRouter } from "../app.router/app.router";
@@ -24,6 +25,7 @@ function App() {
         <Navbar menuOptions={menuOptions}></Navbar>
       </Header>
       <AppRouter menuOptions={menuOptions}></AppRouter>
+
       <Footer></Footer>
     </div>
   );
