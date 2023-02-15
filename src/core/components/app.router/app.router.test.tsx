@@ -9,11 +9,15 @@ describe("Given AppRouter component", () => {
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     { label: "To do", path: "/howto" },
+    { label: "Favourites", path: "/favourites" },
   ];
   describe("When rendering and the path is '/'", () => {
     test("Then, the title 'Welcome to the Rick and Morty' from Home should be in the screen", async () => {
       render(
-        <Router initialEntries={["/", "/about", "/howto"]} initialIndex={0}>
+        <Router
+          initialEntries={["/", "/about", "/howto", "/favourites"]}
+          initialIndex={0}
+        >
           <AppRouter menuOptions={mockOptions}></AppRouter>
         </Router>
       );
@@ -27,7 +31,10 @@ describe("Given AppRouter component", () => {
   describe("When rendering and the path is '/about'", () => {
     test("Then, the title 'What is this site for?' from Home should be in the screen", async () => {
       render(
-        <Router initialEntries={["/", "/about", "/howto"]} initialIndex={1}>
+        <Router
+          initialEntries={["/", "/about", "/howto", "/favorites"]}
+          initialIndex={1}
+        >
           <AppRouter menuOptions={mockOptions}></AppRouter>
         </Router>
       );
@@ -41,13 +48,33 @@ describe("Given AppRouter component", () => {
   describe("When rendering and the path is '/howto'", () => {
     test("Then, the title 'How to use?' from Home should be in the screen", async () => {
       render(
-        <Router initialEntries={["/", "/about", "/howto"]} initialIndex={2}>
+        <Router
+          initialEntries={["/", "/about", "/howto", "/favorites"]}
+          initialIndex={2}
+        >
           <AppRouter menuOptions={mockOptions}></AppRouter>
         </Router>
       );
 
       const element = await screen.findByRole("heading", {
         name: "How to use?",
+      });
+      expect(element).toBeInTheDocument();
+    });
+  });
+  describe("When rendering and the path is '/favourites'", () => {
+    test("Then, the title 'Favourite' from Home should be in the screen", async () => {
+      render(
+        <Router
+          initialEntries={["/", "/about", "/howto", "/favorites"]}
+          initialIndex={3}
+        >
+          <AppRouter menuOptions={mockOptions}></AppRouter>
+        </Router>
+      );
+
+      const element = await screen.findByRole("heading", {
+        name: "My favourite characters",
       });
       expect(element).toBeInTheDocument();
     });
