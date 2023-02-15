@@ -4,8 +4,9 @@ import { Suspense, lazy } from "react";
 const Home = lazy(() => import("../../../features/home/home"));
 const About = lazy(() => import("../../../features/about/about"));
 const HowTo = lazy(() => import("../../../features/how.to.use/instructions"));
-const Error = lazy(() => import("../../../features/error/error"));
-/* const Favorites = lazy(() => import("../../../features/favorites/favorites"));*/
+const Favourites = lazy(
+  () => import("../../../features/favouritesPage/favourites")
+);
 
 type AppRouterProps = {
   menuOptions: MenuOption[];
@@ -18,7 +19,7 @@ export function AppRouter({ menuOptions }: AppRouterProps) {
         <Route path={"/"} element={<Home></Home>}></Route>
         <Route path={menuOptions[1].path} element={<About></About>}></Route>
         <Route path={menuOptions[2].path} element={<HowTo></HowTo>}></Route>
-        <Route path={"*"} element={<Error></Error>}></Route>
+        <Route path={"*"} element={<Favourites></Favourites>}></Route>
       </Routes>
     </Suspense>
   );
