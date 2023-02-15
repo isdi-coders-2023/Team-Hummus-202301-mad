@@ -21,7 +21,6 @@ export const menuOptions: MenuOption[] = [
 function App() {
   return (
     <div className="App">
-
       <Header>
         <Navbar menuOptions={menuOptions}></Navbar>
       </Header>
