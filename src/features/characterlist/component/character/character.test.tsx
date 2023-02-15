@@ -10,8 +10,8 @@ describe("Given a character", () => {
   describe("when it is rendered", () => {
     test("then it should be a button", () => {
       render(<Character char={mockChar}></Character>);
-      const element = screen.getByRole("button");
-      expect(element).toBeInTheDocument();
+      const element = screen.getAllByRole("button");
+      expect(element[0]).toBeInTheDocument();
     });
   });
 });
