@@ -1,13 +1,13 @@
-import { Navbar } from "../navbar/navbar";
 import "./header.scss";
 
-export function Header() {
+type HeaderProps = { children: JSX.Element };
+export function Header({ children }: HeaderProps) {
   return (
     <header className="app-header">
       <div className="app-header__logo">
         <img src="img\logo_rick_and_morty.svg" alt="logo" />
       </div>
-      <Navbar></Navbar>
+      <div>{children}</div>
     </header>
   );
 }
