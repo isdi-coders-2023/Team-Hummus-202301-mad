@@ -6,8 +6,8 @@ export function CharacterList() {
   return (
     <section className="character-list">
       <ul className="character-list__character">
-        {MOCK_Characters.map((item, i = 0) => (
-          <Character key={i++} char={item}></Character>
+        {MOCK_Characters.map((item) => (
+          <Character key={item.name} char={item}></Character>
         ))}
       </ul>
     </section>
