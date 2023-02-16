@@ -1,7 +1,7 @@
 export type CharacterStructure = {
   id: number;
   name: string;
-  img: string;
+  image: string;
   status: string;
   species: string;
   type: string;

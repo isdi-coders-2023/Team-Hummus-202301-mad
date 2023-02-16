@@ -1,13 +1,13 @@
 export type CardStructure = {
   name: string;
-  img: string;
+  image: string;
   isFavourite: boolean;
 };
 
 export class Card implements CardStructure {
   constructor(
     public name: string,
-    public img: string,
+    public image: string,
     public isFavourite: boolean
   ) {}
 }
