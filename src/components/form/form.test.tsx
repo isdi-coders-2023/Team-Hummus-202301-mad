@@ -1,11 +1,11 @@
 /* eslint-disable testing-library/no-render-in-setup */
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Form } from "./form";
 
 describe("Given the From component ", () => {
   let elements: HTMLElement[];
-   const handleSubmit = jest.fn();
+  // const handleSubmit = jest.fn();
 
   beforeEach(() => {
     jest.fn().mockReturnValue({ name: "test" });
