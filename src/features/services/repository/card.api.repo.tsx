@@ -26,15 +26,4 @@ export class CardApiRepo {
     const data = await resp.json();
     return data.results;
   }
-
-  async createCard(input: string) {
-    // Falta rellenar esta parte del codigo
-  }
-
-  async updateCard(input: string) {
-    // Falta rellenar esta parte del codigo
-  }
-  async deleteCard(input: string) {
-    // Falta rellenar esta parte del codigo
-  }
 }
