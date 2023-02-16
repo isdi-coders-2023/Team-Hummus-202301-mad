@@ -6,7 +6,7 @@ export function NavigationArrows() {
       <img
         className="navigation-arrows__arrow-left"
         src="./img/navigation-arrow-left.png"
-        alt=""
+        alt="navigation-arrow"
       />
       <img
         className="navigation-arrows__arrow-right"
