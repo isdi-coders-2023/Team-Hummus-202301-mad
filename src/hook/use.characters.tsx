@@ -5,11 +5,7 @@ import { CharacterApiRepo } from "../services/public.repo/character.api.repo";
 export type UseCharactersStructure = ReturnType<typeof useChars>;
 export function useChars(repo: CharacterApiRepo) {
   const initialState: CharacterStructure[] = [];
-
   const [chars, setChars] = useState(initialState);
-
-  console.log("CHARS: ", chars);
-
   const handlerError = (error: Error) => {
     console.log(error.message);
   };
