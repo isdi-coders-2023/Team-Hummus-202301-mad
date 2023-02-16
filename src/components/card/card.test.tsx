@@ -1,4 +1,6 @@
 import { render, screen } from "@testing-library/react";
+import { AppContext } from "../../context/context";
+import { UseCharactersStructure } from "../../hook/use.characters";
 import { CardStructure } from "../../models/cards/card";
 import { Card } from "./card";
 /* Parte del test que no se puede hacer hasta tener contexto
@@ -10,8 +12,16 @@ const mockCard: CardStructure = {
 
 describe("Given a character", () => {
   describe("when it is rendered", () => {
-    test("then it should be a button", () => {
-      render(<Card char={mockCard}></Card>);
+    test("then it should be a button", async () => {
+      const mockContext = {
+        loadChars: jest.fn(),
+      } as unknown as UseCharactersStructure;
+
+      await render(
+        <AppContext.Provider value={mockContext}>
+          <Card char={mockCard}></Card>
+        </AppContext.Provider>
+      );
       const element = screen.getAllByRole("button");
       expect(element[0]).toBeInTheDocument();
     });
