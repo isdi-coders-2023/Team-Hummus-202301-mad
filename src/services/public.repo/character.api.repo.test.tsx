@@ -1,4 +1,4 @@
-import { CharacterStructure } from "../../../models/character/character";
+import { CharacterStructure } from "../../models/character/character";
 import { CharacterApiRepo } from "./character.api.repo";
 
 describe("Given CardApiRepo", () => {

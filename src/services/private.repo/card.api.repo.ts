@@ -1,7 +1,7 @@
 import {
   ProtoCharacterStructure,
   CharacterStructure,
-} from "../../../models/character/character";
+} from "../../models/character/character";
 
 export interface CardApiRepoStructure {
   loadCards(): Promise<ProtoCharacterStructure>;

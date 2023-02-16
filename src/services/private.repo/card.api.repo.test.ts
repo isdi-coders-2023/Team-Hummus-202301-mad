@@ -1,4 +1,4 @@
-import { CharacterStructure } from "../../../models/character/character";
+import { CharacterStructure } from "../../models/character/character";
 import { CardApiRepo } from "./card.api.repo";
 
 const mockCard: CharacterStructure[] = [
