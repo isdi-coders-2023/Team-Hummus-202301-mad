@@ -1,7 +1,7 @@
-import { CardStructure } from "../../card/models/card";
+import { CharacterStructure } from "../../../models/character/character";
 import { CardApiRepo } from "./card.api.repo";
 
-const mockCard: CardStructure[] = [
+const mockCard: CharacterStructure[] = [
   {
     id: 0,
     name: "a",
@@ -72,7 +72,7 @@ describe("Given a new private repo", () => {
     });
     test("then it should throw error and not delete any data", async () => {
       try {
-        const r = await repo1.deleteCard(mockCard[0].id);
+        await repo1.deleteCard(mockCard[0].id);
       } catch (error) {
         // eslint-disable-next-line jest/no-conditional-expect
         expect((error as Error).message).toBe("Delete not possible!");
