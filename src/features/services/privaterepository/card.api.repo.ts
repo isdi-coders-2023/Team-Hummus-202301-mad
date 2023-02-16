@@ -14,23 +14,23 @@ export class CardApiRepo {
     this.url = "http://localhost:3000/characters";
   }
 
-  async loadCards() {
+  async loadCards(): Promise<CardStructure[]> {
     const resp = await fetch(this.url);
     const data = await resp.json();
-    return data.results;
+    return data;
   }
 
   async getCards(input: string) {
     const url = this.url + "/?" + input;
     const resp = await fetch(url);
     const data = await resp.json();
-    return data.results;
+    return data;
   }
 
-  async createCard(input: string) {
+  async createCard(card: ProtoCardStructure): Promise<CardStructure> {
     const resp = await fetch(this.url, {
       method: "POST",
-      body: JSON.stringify(input),
+      body: JSON.stringify(card),
       headers: {
         "Content-type": "application/json",
       },
@@ -39,11 +39,11 @@ export class CardApiRepo {
     return data;
   }
 
-  async updateCard(input: any) {
-    const url = this.url + "/" + input.id;
+  async updateCard(card: Partial<CardStructure>): Promise<CardStructure> {
+    const url = this.url + "/" + card.id;
     const resp = await fetch(url, {
       method: "PATCH",
-      body: JSON.stringify(input),
+      body: JSON.stringify(card),
       headers: {
         "Content-type": "application/json",
       },
@@ -51,8 +51,8 @@ export class CardApiRepo {
     const data = (await resp.json()) as CardStructure;
     return data;
   }
-  async deleteCard(input: any) {
-    const url = this.url + "/" + input.id;
+  async deleteCard(id: CardStructure["id"]): Promise<void> {
+    const url = this.url + "/" + id;
     const resp = await fetch(url, {
       method: "DELETE",
     });
