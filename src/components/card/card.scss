@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gafata&display=swap");
+@import "../../variables.scss";
+
+.character-colum {
+  list-style: none;
+}
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__img {
+    width: 8rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-bottom: 1px solid black;
+
+    @media (min-width: 600px) {
+      width: 10rem;
+    }
+  }
+
+  &__info {
+    width: 8rem;
+    height: 1.5rem;
+
+    background-color: $card-bg-color;
+    border-radius: 0 0 0.5rem 0.5rem;
+    justify-content: center;
+    align-items: center;
+
+    &__name {
+      text-align: center;
+      font-family: $font-card-title;
+      font-weight: normal;
+      margin-top: 0.1rem;
+      font-size: 1rem;
+      @media (min-width: 600px) {
+        font-size: 1.5rem;
+        margin-top: 0rem;
+      }
+    }
+    @media (min-width: 600px) {
+      width: 10rem;
+      height: 2rem;
+    }
+  }
+
+  &__fav_btn--active {
+    position: relative;
+    left: -4.4rem;
+    top: 2.5rem;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: 600px) {
+      left: -3.6rem;
+      top: 1.5rem;
+    }
+
+    &__img {
+      width: 2rem;
+
+      @media (min-width: 600px) {
+        width: 3rem;
+      }
+    }
+  }
+  &__fav_btn--hidden {
+    position: relative;
+    left: -3.6rem;
+    top: 1.5rem;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: 600px) {
+      left: -4.4rem;
+      top: 2.5rem;
+    }
+  }
+  &__fav_action__img {
+    width: 2rem;
+    @media (min-width: 600px) {
+      width: 3rem;
+    }
+  }
+}

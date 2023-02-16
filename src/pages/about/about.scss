@@ -1,0 +1,67 @@
+.about-div {
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  gap: 3.7rem;
+  @media (min-width: 600px) {
+    text-align: initial;
+  }
+}
+
+.article-how {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  &__h {
+    color: #d5e56f;
+    font-size: 2.5rem;
+  }
+  &__p {
+    color: white;
+    font-weight: 500;
+    line-height: 1.3;
+    font-size: 1.5rem;
+  }
+}
+.article-who {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  &__h {
+    color: #d5e56f;
+    font-size: 2.5rem;
+  }
+  &__p {
+    color: white;
+    font-weight: 500;
+    line-height: 1.3;
+    font-size: 1.5rem;
+  }
+}
+.article-what {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  &__h {
+    color: #d5e56f;
+    font-size: 2.5rem;
+  }
+  &__p {
+    color: white;
+    font-weight: 500;
+    line-height: 1.3;
+    font-size: 1.5rem;
+  }
+}
+.we-hope {
+  padding: 3rem;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.1rem;
+  @media (min-width: 600px) {
+    font-size: 2.7rem;
+  }
+}
