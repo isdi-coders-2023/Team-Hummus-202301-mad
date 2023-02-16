@@ -1,10 +1,10 @@
-import { CharacterStructure } from "../model/character";
-import "./character.scss";
-type CharacterProps = {
-  char: CharacterStructure;
+import { CardStructure } from "../../models/cards/card";
+import "./card.scss";
+type CardProps = {
+  char: CardStructure;
 };
 
-export function Character({ char }: CharacterProps) {
+export function Card({ char }: CardProps) {
   //Activar esta función cuando tengamos contexto
   /* const handleFav = (current: boolean) => {
     char.isFavourite = !current;

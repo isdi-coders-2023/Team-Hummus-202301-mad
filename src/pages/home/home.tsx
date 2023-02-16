@@ -1,5 +1,5 @@
-import { CharacterList } from "../characterlist/component/characterlist/characterlist";
-import { Cover } from "../cover/cover";
+import { CharacterList } from "../../components/cardlist/cardlist";
+import { Cover } from "../../components/cover/cover";
 
 export default function Home() {
   return (

@@ -1,16 +1,16 @@
 import { render, screen } from "@testing-library/react";
+import { CardStructure } from "../../models/cards/card";
+import { Card } from "./card";
 //import userEvent from "@testing-library/user-event";
-import { CharacterStructure } from "../model/character";
-import { Character } from "./character";
 
-const mockChar: CharacterStructure = {
+const mockCard: CardStructure = {
   char: "string",
-} as unknown as CharacterStructure;
+} as unknown as CardStructure;
 
 describe("Given a character", () => {
   describe("when it is rendered", () => {
     test("then it should be a button", () => {
-      render(<Character char={mockChar}></Character>);
+      render(<Card char={mockCard}></Card>);
       const element = screen.getAllByRole("button");
       expect(element[0]).toBeInTheDocument();
     });

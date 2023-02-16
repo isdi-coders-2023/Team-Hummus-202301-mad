@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { CharacterList } from "./characterlist";
+import { CharacterList } from "./cardlist";
 
 jest.mock("../character/character");
 

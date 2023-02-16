@@ -1,12 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import { MenuOption } from "../app/App";
 import { Suspense, lazy } from "react";
-const Home = lazy(() => import("../../../features/home/home"));
-const About = lazy(() => import("../../../features/about/about"));
-const HowTo = lazy(() => import("../../../features/how.to.use/instructions"));
-const Favourites = lazy(
-  () => import("../../../features/favouritesPage/favourites")
-);
+const Home = lazy(() => import("../../pages/home/home"));
+const About = lazy(() => import("../../pages/about/about"));
+const HowTo = lazy(() => import("../../pages/how.to.use/instructions"));
+const Favourites = lazy(() => import("../../pages/favourites/favourites"));
 
 type AppRouterProps = {
   menuOptions: MenuOption[];

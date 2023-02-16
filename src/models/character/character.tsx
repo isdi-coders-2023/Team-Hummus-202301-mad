@@ -2,7 +2,7 @@ type isFavourite = {
   isFavourite: boolean;
 };
 
-export type ProtoCardStructure = {
+export type ProtoCharacterStructure = {
   id: number;
   name: string;
   status: string;
@@ -12,4 +12,4 @@ export type ProtoCardStructure = {
   location: string;
 };
 
-export type CardStructure = isFavourite & ProtoCardStructure;
+export type CharacterStructure = isFavourite & ProtoCharacterStructure;
