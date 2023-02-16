@@ -16,8 +16,9 @@ export class CharacterApiRepo {
 
   async loadChars(): Promise<CharacterStructure[]> {
     const resp = await fetch(this.url);
-    const data = (await resp.json()) as CharacterStructure[];
-    return data;
+    const data = await resp.json();
+    console.log(data);
+    return data.results;
   }
 
   async getChars(input: string) {
