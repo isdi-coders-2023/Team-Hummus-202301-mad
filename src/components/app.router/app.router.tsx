@@ -5,7 +5,8 @@ const Home = lazy(() => import("../../pages/home/home"));
 const About = lazy(() => import("../../pages/about/about"));
 const HowTo = lazy(() => import("../../pages/how.to.use/instructions"));
 const Favourites = lazy(() => import("../../pages/favourites/favourites"));
-const Add = lazy(() => import("../../pages/add/add.character"));
+
+// To add later -> const Add = lazy(() => import("../../pages/add/add.character"));
 
 type AppRouterProps = {
   menuOptions: MenuOption[];
