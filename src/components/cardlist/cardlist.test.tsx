@@ -7,7 +7,7 @@ describe("Given a character list", () => {
   describe("when it is rendered", () => {
     test("then it should list items", async () => {
       render(<CharacterList></CharacterList>);
-      const elementNumbers = screen.getAllByRole("listitem");
+      const elementNumbers = screen.getAllByRole("list");
 
       for (let i = 0; i < elementNumbers.length; i++) {
         expect(elementNumbers).toBeInTheDocument();
