@@ -5,7 +5,6 @@ import { Form } from "./form";
 
 describe("Given the From component ", () => {
   let elements: HTMLElement[];
-  // const handleSubmit = jest.fn();
 
   beforeEach(() => {
     jest.fn().mockReturnValue({ name: "test" });
@@ -28,11 +27,4 @@ describe("Given the From component ", () => {
       expect(elements[1]).toHaveValue(mockUser);
     });
   });
-
-  // describe("When we click the 'add' button", () => {
-  //   test("Then it should fire handleSubmit()", () => {
-  //     fireEvent.submit(elements[1]);
-  //     expect(handleSubmit).toHaveBeenCalled();
-  //   });
-  // });
 });
