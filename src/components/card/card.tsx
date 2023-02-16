@@ -5,8 +5,7 @@ type CardProps = {
 };
 
 export function Card({ char }: CardProps) {
-  //Activar esta función cuando tengamos contexto
-  /* const handleFav = (current: boolean) => {
+  /*Activar esta función cuando tengamos contexto const handleFav = (current: boolean) => {
     char.isFavourite = !current;
     console.log(char);
   }; */
@@ -15,8 +14,7 @@ export function Card({ char }: CardProps) {
     <li className="character-colum">
       <div className="character-card">
         {
-          //Implementar botones cuando tengamos contexto
-          /* {char.isFavourite && (
+          /* Implementar botones cuando tengamos contexto {char.isFavourite && (
           <button
             className="character-card__fav_btn--active"
             onClick={() => handleFav(char.isFavourite)}
@@ -32,14 +30,14 @@ export function Card({ char }: CardProps) {
         {!char.isFavourite && (*/
           <button
             className="character-card__fav_btn--hidden"
-            /* onClick={() => handleFav(char.isFavourite)} */
+            /* Implementar botones cuando tengamos contextoonClick={() => handleFav(char.isFavourite)} */
           >
             <img
               className="character-card__fav_action__img"
               src="img\button-fav.png"
               alt="fav-button"
             ></img>
-          </button> /*
+          </button> /*Implementar botones cuando tengamos contexto
         )} */
         }
         <img className="character-card__img" src={char.img} alt={char.name} />
