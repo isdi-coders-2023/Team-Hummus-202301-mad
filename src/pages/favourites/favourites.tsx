@@ -1,4 +1,4 @@
-import { CharacterList } from "../characterlist/component/characterlist/characterlist";
+import { CharacterList } from "../../components/cardlist/cardlist";
 
 export default function Favourites() {
   return (

@@ -1,14 +1,17 @@
-import { CardStructure, ProtoCardStructure } from "../../card/models/card";
+import {
+  CharacterStructure,
+  ProtoCharacterStructure,
+} from "../../models/character/character";
 
-export interface CardApiRepoStructure {
-  loadCards(): Promise<ProtoCardStructure>;
-  getCard(): Promise<ProtoCardStructure>;
-  createCard(card: ProtoCardStructure): Promise<CardStructure>;
-  updateCard(card: Partial<CardStructure>): Promise<CardStructure>;
-  deleteCard(id: CardStructure["id"]): Promise<void>;
+export interface CharacterApiRepoStructure {
+  loadCards(): Promise<ProtoCharacterStructure>;
+  getCard(): Promise<ProtoCharacterStructure>;
+  createCard(card: ProtoCharacterStructure): Promise<CharacterStructure>;
+  updateCard(card: Partial<CharacterStructure>): Promise<CharacterStructure>;
+  deleteCard(id: CharacterStructure["id"]): Promise<void>;
 }
 
-export class CardApiRepo {
+export class CharacterApiRepo {
   url: string;
   constructor() {
     this.url = "https://rickandmortyapi.com/api/character";

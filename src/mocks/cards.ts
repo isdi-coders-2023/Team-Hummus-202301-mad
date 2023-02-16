@@ -1,6 +1,6 @@
-import { CharacterStructure } from "../model/character";
+import { CardStructure } from "../models/cards/card";
 
-export const MOCK_Characters: CharacterStructure[] = [
+export const MOCK_Cards: CardStructure[] = [
   {
     name: "Pepe",
     img: "https://rickandmortyapi.com/api/character/avatar/361.jpeg",
