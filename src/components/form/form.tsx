@@ -1,5 +1,5 @@
 import { SyntheticEvent } from "react";
-import { ProtoCardStructure } from "../../card/models/card";
+import { ProtoCharacterStructure } from "../../models/character/character";
 import "./form.scss";
 
 export function Form({ url }: any) {
@@ -9,7 +9,7 @@ export function Form({ url }: any) {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const inputs = form.querySelectorAll("input");
-    const newCard: ProtoCardStructure = {
+    const newCharacter: ProtoCharacterStructure = {
       image: inputs[0].value,
       name: inputs[1].value,
       status: inputs[2].value,
@@ -20,7 +20,7 @@ export function Form({ url }: any) {
       isFavourite: true,
     };
 
-    console.log(newCard);
+    console.log(newCharacter);
     // Hay que poner esto de abajo cuando este creada la api privada y la ruta del add.
     // url === 'http://localhost:3000/add'? CreateCard(newCard) : UpdateCard(newCard);
   };

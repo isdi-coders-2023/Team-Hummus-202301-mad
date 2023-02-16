@@ -4,8 +4,8 @@ import {
 } from "../../models/character/character";
 
 export interface CardApiRepoStructure {
-  loadCards(): Promise<ProtoCharacterStructure>;
-  getCard(): Promise<ProtoCharacterStructure>;
+  loadCards(): Promise<CharacterStructure>;
+  getCard(): Promise<CharacterStructure>;
   createCard(card: ProtoCharacterStructure): Promise<CharacterStructure>;
   updateCard(card: Partial<CharacterStructure>): Promise<CharacterStructure>;
   deleteCard(id: CharacterStructure["id"]): Promise<void>;

@@ -1,4 +1,4 @@
-import { Form } from "../../forms/page/form";
+import { Form } from "../../components/form/form";
 import "./add.character.scss";
 
 export default function Add() {

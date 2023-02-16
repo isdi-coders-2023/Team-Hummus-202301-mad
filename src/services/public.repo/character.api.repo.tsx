@@ -1,14 +1,8 @@
-import {
-  CharacterStructure,
-  ProtoCharacterStructure,
-} from "../../models/character/character";
+import { CharacterStructure } from "../../models/character/character";
 
 export interface CharacterApiRepoStructure {
-  loadCards(): Promise<ProtoCharacterStructure>;
-  getCard(): Promise<ProtoCharacterStructure>;
-  createCard(card: ProtoCharacterStructure): Promise<CharacterStructure>;
-  updateCard(card: Partial<CharacterStructure>): Promise<CharacterStructure>;
-  deleteCard(id: CharacterStructure["id"]): Promise<void>;
+  loadCards(): Promise<CharacterStructure>;
+  getCard(): Promise<CharacterStructure>;
 }
 
 export class CharacterApiRepo {
