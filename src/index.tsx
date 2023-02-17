@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./components/app/App";
-import { AppContextProvider } from "./context/context.provider";
+import { AppContextProviderPrivate } from "./context private/context.provider.private";
+import { AppContextProvider } from "./context public/context.provider";
 import "./index.css";
 
 import reportWebVitals from "./reportWebVitals";
@@ -13,9 +14,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <AppContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <AppContextProviderPrivate>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </AppContextProviderPrivate>
     </AppContextProvider>
   </React.StrictMode>
 );
