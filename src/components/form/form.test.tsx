@@ -1,23 +1,13 @@
 /* eslint-disable testing-library/no-render-in-setup */
-import {
-  fireEvent,
-  getByRole,
-  getByTestId,
-  render,
-  screen,
-} from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Form } from "./form";
 
-describe("Given the From component ", () => {
+describe("Given the From component", () => {
   let elements: HTMLElement[];
 
   beforeEach(() => {
-    jest.fn().mockReturnValue({ name: "test" });
-    render(<Form/>);
-
-    elements = [...screen.getAllByRole("textbox"), screen.getByRole("button")];
-    const mockReturnValue = [
+    const mockValues = [
       { value: "https://www.example.png" },
       { value: "Rick" },
       { value: "alive" },
@@ -26,6 +16,23 @@ describe("Given the From component ", () => {
       { value: "male" },
       { value: "earth" },
     ];
+
+    const mockCharacter = {
+      id: 1,
+      image: "https://www.example.png",
+      name: "Rick",
+      status: "alive",
+      species: "human",
+      type: "-",
+      gender: "male",
+      location: "earth",
+      isFavourite: false,
+    };
+
+    jest.fn().mockReturnValue({ name: "test" });
+    render(<Form char={mockCharacter} />);
+
+    elements = [...screen.getAllByRole("textbox"), screen.getByRole("button")];
   });
 
   describe("When we render it", () => {
@@ -45,7 +52,7 @@ describe("Given the From component ", () => {
 
   describe("When the user submits the form...", () => {
     test("submits the form with the correct ProtoCharacterStructure object", () => {
-      userEvent.click(screen.getByRole('button'))
+      userEvent.click(screen.getByRole("button"));
       // expect(onSubmit).toBeCalled();
     });
   });
