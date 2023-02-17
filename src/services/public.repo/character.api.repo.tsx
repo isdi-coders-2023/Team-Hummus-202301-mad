@@ -1,12 +1,9 @@
-import {
-  CharacterStructure,
-  ProtoCharacterStructure,
-} from "../../models/character/character";
+import { CharacterStructure } from "../../models/character/character";
 
 export interface CharacterApiRepoStructure {
-  loadCards(): Promise<ProtoCharacterStructure>;
-  getCard(): Promise<ProtoCharacterStructure>;
-  createCard(card: ProtoCharacterStructure): Promise<CharacterStructure>;
+  loadCards(): Promise<CharacterStructure>;
+  getCard(): Promise<CharacterStructure>;
+  createCard(card: CharacterStructure): Promise<CharacterStructure>;
   updateCard(card: Partial<CharacterStructure>): Promise<CharacterStructure>;
   deleteCard(id: CharacterStructure["id"]): Promise<void>;
 }
@@ -17,27 +14,27 @@ export class CharacterApiRepo {
     this.url = "https://rickandmortyapi.com/api/character";
   }
 
-  async loadCards() {
+  async loadChars(): Promise<CharacterStructure[]> {
     const resp = await fetch(this.url);
     const data = await resp.json();
     return data.results;
   }
 
-  async getCards(input: string) {
+  async getChars(input: string) {
     const url = this.url + "/?" + input;
     const resp = await fetch(url);
     const data = await resp.json();
     return data.results;
   }
 
-  async createCard(input: string) {
+  async createChar(input: string) {
     // Falta rellenar esta parte del codigo
   }
 
-  async updateCard(input: string) {
+  async updateChar(input: string) {
     // Falta rellenar esta parte del codigo
   }
-  async deleteCard(input: string) {
+  async deleteChar(input: string) {
     // Falta rellenar esta parte del codigo
   }
 }
