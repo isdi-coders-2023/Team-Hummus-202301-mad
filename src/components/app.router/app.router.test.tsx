@@ -24,7 +24,7 @@ describe("Given AppRouter component", () => {
       );
 
       const element = await screen.findByRole("heading", {
-        name: "Welcome to the Rick and Morty character fanpage.",
+        name: "Welcome",
       });
       expect(element).toBeInTheDocument();
     });
@@ -75,7 +75,7 @@ describe("Given AppRouter component", () => {
       );
 
       const element = await screen.findByRole("heading", {
-        name: "My favourite characters",
+        name: "My favourite",
       });
       expect(element).toBeInTheDocument();
     });

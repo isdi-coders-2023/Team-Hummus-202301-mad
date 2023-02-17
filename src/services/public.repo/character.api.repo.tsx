@@ -11,13 +11,13 @@ export class CharacterApiRepo {
     this.url = "https://rickandmortyapi.com/api/character";
   }
 
-  async loadCards() {
+  async loadChars(): Promise<CharacterStructure[]> {
     const resp = await fetch(this.url);
     const data = await resp.json();
     return data.results;
   }
 
-  async getCards(input: string) {
+  async getChars(input: string) {
     const url = this.url + "/?" + input;
     const resp = await fetch(url);
     const data = await resp.json();

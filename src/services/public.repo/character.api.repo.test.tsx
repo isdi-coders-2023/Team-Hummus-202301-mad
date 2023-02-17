@@ -10,13 +10,13 @@ describe("Given CardApiRepo", () => {
 
   describe("When CardApiRepo is instanced, and we use the methods...", () => {
     test("Then loadCards should return an array of card data", async () => {
-      const cards = await cardApiRepo.loadCards();
+      const cards = await cardApiRepo.loadChars();
       expect(Array.isArray(cards)).toBe(true);
       expect(cards.length).toBeGreaterThan(0);
     });
 
     test("getCards should return an array of card data that matches the input", async () => {
-      const cards = await cardApiRepo.getCards("name=rick");
+      const cards = await cardApiRepo.getChars("name=rick");
       expect(Array.isArray(cards)).toBe(true);
       expect(cards.length).toBeGreaterThan(0);
       expect(
