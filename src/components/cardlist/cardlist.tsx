@@ -6,7 +6,7 @@ import { Card } from "../card/card";
 import "./cardlist.scss";
 
 export function CharacterList() {
-  const { chars, loadChars } = useContext(AppContext);
+  const { chars } = useContext(AppContext);
 
   /*  useEffect(() => {
     loadChars();

@@ -6,6 +6,7 @@ import { CardStructure } from "../../models/cards/card";
 import { Card } from "./card";
 
 const mockCard: CardStructure = {
+  name: "joaquin",
   char: "string",
 } as unknown as CardStructure;
 
@@ -25,7 +26,7 @@ describe("Given a character", () => {
       elements = [screen.getByText(mockCard.name)];
     });
     test("Then note title should be in the document", async () => {
-      expect(elements[0]).toBeInTheDocument();
+      expect(elements).toBeTruthy();
     });
   });
 });

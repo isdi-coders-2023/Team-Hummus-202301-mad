@@ -11,3 +11,15 @@ export class Card implements CardStructure {
     public isFavourite: boolean
   ) {}
 }
+
+export type DetailCardStructure = {
+  id: number;
+  name: string;
+  image: string;
+  status: string;
+  species: string;
+  type: string;
+  gender: string;
+  location: string;
+  isFavourite: boolean;
+};
