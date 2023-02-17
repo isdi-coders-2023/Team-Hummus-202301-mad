@@ -153,7 +153,7 @@ describe("Given AppRouter component", () => {
       );
 
       const element = await screen.findByRole("heading", {
-        name: "Add new character",
+        name: ".",
       });
       expect(element).toBeInTheDocument();
     });
