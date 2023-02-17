@@ -11,12 +11,21 @@ describe("Given AppRouter component", () => {
     { label: "To do", path: "/howto" },
     { label: "Favourites", path: "/favourites" },
     { label: "Add", path: "/add" },
+    { label: "Detail", path: "/detail" },
+    { label: "Error", path: "*" },
   ];
   describe("When rendering and the path is '/'", () => {
     test("Then, the title 'Welcome to the Rick and Morty' from Home should be in the screen", async () => {
       render(
         <Router
-          initialEntries={["/", "/about", "/howto", "/favourites"]}
+          initialEntries={[
+            "/",
+            "/about",
+            "/howto",
+            "/favourites",
+            "/add",
+            "/detail",
+          ]}
           initialIndex={0}
         >
           <AppRouter menuOptions={mockOptions}></AppRouter>
@@ -33,7 +42,14 @@ describe("Given AppRouter component", () => {
     test("Then, the title 'What is this site for?' from Home should be in the screen", async () => {
       render(
         <Router
-          initialEntries={["/", "/about", "/howto", "/favourites"]}
+          initialEntries={[
+            "/",
+            "/about",
+            "/howto",
+            "/favourites",
+            "/add",
+            "/detail",
+          ]}
           initialIndex={1}
         >
           <AppRouter menuOptions={mockOptions}></AppRouter>
@@ -50,7 +66,14 @@ describe("Given AppRouter component", () => {
     test("Then, the title 'How to use?' from Home should be in the screen", async () => {
       render(
         <Router
-          initialEntries={["/", "/about", "/howto", "/favourites"]}
+          initialEntries={[
+            "/",
+            "/about",
+            "/howto",
+            "/favourites",
+            "/add",
+            "/detail",
+          ]}
           initialIndex={2}
         >
           <AppRouter menuOptions={mockOptions}></AppRouter>
@@ -67,7 +90,14 @@ describe("Given AppRouter component", () => {
     test("Then, the title 'Favourite' from Home should be in the screen", async () => {
       render(
         <Router
-          initialEntries={["/", "/about", "/howto", "/favourites"]}
+          initialEntries={[
+            "/",
+            "/about",
+            "/howto",
+            "/favourites",
+            "/add",
+            "/detail",
+          ]}
           initialIndex={3}
         >
           <AppRouter menuOptions={mockOptions}></AppRouter>
@@ -81,11 +111,42 @@ describe("Given AppRouter component", () => {
     });
   });
   describe("When rendering and the path is '/add'", () => {
+    test("Then, the title 'Add new character' from Home should be in the screen", async () => {
+      render(
+        <Router
+          initialEntries={[
+            "/",
+            "/about",
+            "/howto",
+            "/favourites",
+            "/add",
+            "/detail",
+          ]}
+          initialIndex={4}
+        >
+          <AppRouter menuOptions={mockOptions}></AppRouter>
+        </Router>
+      );
+
+      const element = await screen.findByRole("heading", {
+        name: "Add new character",
+      });
+      expect(element).toBeInTheDocument();
+    });
+  });
+  describe("When rendering and the path is '/detail", () => {
     test("Then, the title 'Favourite' from Home should be in the screen", async () => {
       render(
         <Router
-          initialEntries={["/", "/about", "/howto", "/favourites", "/add"]}
-          initialIndex={4}
+          initialEntries={[
+            "/",
+            "/about",
+            "/howto",
+            "/favourites",
+            "/add",
+            "/detail",
+          ]}
+          initialIndex={5}
         >
           <AppRouter menuOptions={mockOptions}></AppRouter>
         </Router>

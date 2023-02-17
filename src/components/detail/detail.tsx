@@ -11,7 +11,7 @@ export const Detail = ({ char }: CardProps) => {
         <img src={char.image} alt="Character_Image" />
       </div>
       <div>
-        <h2 className="detail-title">{char.name}</h2>
+        <h2 className="detail-title">{char.name}.</h2>
         <ul>
           <li className="detail-title__li">{char.id}</li>
           <li className="detail-title__li">{char.name}</li>
