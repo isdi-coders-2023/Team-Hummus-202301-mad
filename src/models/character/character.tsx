@@ -1,7 +1,10 @@
-export type CharacterStructure = {
+type HasId = {
   id: number;
-  name: string;
+};
+
+export type ProtoCharacterStructure = {
   image: string;
+  name: string;
   status: string;
   species: string;
   type: string;
@@ -9,3 +12,5 @@ export type CharacterStructure = {
   location: string;
   isFavourite: boolean;
 };
+
+export type CharacterStructure = HasId & ProtoCharacterStructure;
