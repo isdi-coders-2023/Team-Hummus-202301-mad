@@ -8,7 +8,7 @@ export const Detail = ({ char }: CardProps) => {
   return (
     <section className="detail">
       <div className="detail-img">
-        <img src={char.image} alt="" />
+        <img src={char.image} alt="Character_Image" />
       </div>
       <div>
         <h2 className="detail-title">{char.name}</h2>
