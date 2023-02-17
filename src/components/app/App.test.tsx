@@ -2,6 +2,7 @@ import { render } from "@testing-library/react";
 import { Header } from "../header/header";
 import { Footer } from "../footer/footer";
 import App from "./App";
+import { AppRouter } from "../app.router/app.router";
 
 jest.mock("../header/header");
 jest.mock("../footer/footer");
@@ -13,6 +14,7 @@ describe("Given App component", () => {
       render(<App />);
       expect(Header).toHaveBeenCalled();
       expect(Footer).toHaveBeenCalled();
+      expect(AppRouter).toBeCalled();
     });
   });
 });

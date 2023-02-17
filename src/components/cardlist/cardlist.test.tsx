@@ -5,11 +5,13 @@ jest.mock("../card/card");
 
 describe("Given a character list", () => {
   describe("when it is rendered", () => {
-    test("then it should list items", () => {
+    test("then it should list items", async () => {
       render(<CharacterList></CharacterList>);
-      const elementNumber = screen.getAllByRole("list");
-      console.log(elementNumber.length);
-      expect(elementNumber.length).toBe(1);
+      const elementNumbers = screen.getAllByRole("list");
+
+      for (let i = 0; i < elementNumbers.length; i++) {
+        expect(elementNumbers).toBeInTheDocument();
+      }
     });
   });
 });

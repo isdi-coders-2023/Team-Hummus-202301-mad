@@ -40,7 +40,7 @@ export function Card({ char }: CardProps) {
           </button> /*Implementar botones cuando tengamos contexto
         )} */
         }
-        <img className="character-card__img" src={char.img} alt={char.name} />
+        <img className="character-card__img" src={char.image} alt={char.name} />
         <div className="character-card__info">
           <h2 className="character-card__info__name">{char.name}</h2>
         </div>

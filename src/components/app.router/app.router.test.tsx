@@ -23,7 +23,7 @@ describe("Given AppRouter component", () => {
       );
 
       const element = await screen.findByRole("heading", {
-        name: "Welcome to the Rick and Morty character fanpage.",
+        name: "Welcome",
       });
       expect(element).toBeInTheDocument();
     });
@@ -32,7 +32,7 @@ describe("Given AppRouter component", () => {
     test("Then, the title 'What is this site for?' from Home should be in the screen", async () => {
       render(
         <Router
-          initialEntries={["/", "/about", "/howto", "/favorites"]}
+          initialEntries={["/", "/about", "/howto", "/favourites"]}
           initialIndex={1}
         >
           <AppRouter menuOptions={mockOptions}></AppRouter>
@@ -66,7 +66,7 @@ describe("Given AppRouter component", () => {
     test("Then, the title 'Favourite' from Home should be in the screen", async () => {
       render(
         <Router
-          initialEntries={["/", "/about", "/howto", "/favorites"]}
+          initialEntries={["/", "/about", "/howto", "/favourites"]}
           initialIndex={3}
         >
           <AppRouter menuOptions={mockOptions}></AppRouter>
@@ -74,7 +74,7 @@ describe("Given AppRouter component", () => {
       );
 
       const element = await screen.findByRole("heading", {
-        name: "My favourite characters",
+        name: "My favourite",
       });
       expect(element).toBeInTheDocument();
     });
