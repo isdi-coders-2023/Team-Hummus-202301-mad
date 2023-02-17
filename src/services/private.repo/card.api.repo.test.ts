@@ -11,6 +11,7 @@ const mockCard: CharacterStructure[] = [
     gender: "",
     location: "",
     isFavourite: false,
+    image: "",
   },
   {
     id: 1,
@@ -21,6 +22,7 @@ const mockCard: CharacterStructure[] = [
     gender: "",
     location: "",
     isFavourite: false,
+    image: "",
   },
 ];
 
