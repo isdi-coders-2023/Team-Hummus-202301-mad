@@ -1,9 +1,10 @@
-import { SyntheticEvent } from "react";
+import { SyntheticEvent, useContext } from "react";
 import { ProtoCharacterStructure } from "../../models/character/character";
 import "./form.scss";
+import { AppContextPrivate } from "../../context private/context.private";
 
 export function Form({ url }: any) {
-  // Codigo -> const { updateTask, createTask } = useContext(AppContext);
+  const { updateChar, addChar } = useContext(AppContextPrivate);
 
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
@@ -20,8 +21,23 @@ export function Form({ url }: any) {
       isFavourite: true,
     };
 
-    // Hay que poner esto de abajo cuando este creada la api privada y la ruta del add.
-    //  Esto -> url === 'http://localhost:3000/add'? CreateCard(newCharacter) : UpdateCard(newCharacter);
+    // const updateCharacter: CharacterStructure = {
+    //   id: inputs[0].value, // Cambiar
+    //   image: inputs[0].value,
+    //   name: inputs[1].value,
+    //   status: inputs[2].value,
+    //   species: inputs[3].value,
+    //   type: inputs[4].value,
+    //   gender: inputs[5].value,
+    //   location: inputs[6].value,
+    //   isFavourite: true,
+    // };
+
+    console.log("add character", newCharacter);
+    addChar(newCharacter);
+    // url === "http://localhost:3000/add"
+    //   ? addChar(newCharacter)
+    // : updateChar(newCharacter);
   };
 
   return (
