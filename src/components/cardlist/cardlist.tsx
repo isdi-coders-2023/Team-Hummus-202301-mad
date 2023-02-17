@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { AppContext } from "../../context/context public/context";
 import { CharacterStructure } from "../../models/character/character";
 import { Card } from "../card/card";
