@@ -13,6 +13,7 @@ export const menuOptions: MenuOption[] = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "How to", path: "/howto" },
+  { label: "Detail", path: "/detail" },
   { label: "Favorites", path: "/favorites" },
 ];
 
