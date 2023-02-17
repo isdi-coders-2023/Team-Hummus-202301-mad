@@ -15,6 +15,7 @@ export const menuOptions: MenuOption[] = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "How to", path: "/howto" },
+  { label: "Favourites", path: "/favourites" },
   { label: "Add", path: "/add" },
 ];
 
