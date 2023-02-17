@@ -1,5 +1,7 @@
 import { CardStructure } from "../../models/cards/card";
 import "./card.scss";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 type CardProps = {
   char: CardStructure;
 };
@@ -9,6 +11,18 @@ export function Card({ char }: CardProps) {
     char.isFavourite = !current;
     console.log(char);
   }; */
+  const { id } = useParams();
+  const [character, setCharacter] = useState();
+  useEffect(() => {
+    const url = "https://rickandmortyapi.com/api/character/" + id;
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setCharacter(data.character);
+      });
+  });
 
   return (
     <li className="character-colum">
