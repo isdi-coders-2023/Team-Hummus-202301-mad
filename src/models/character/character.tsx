@@ -1,15 +1,16 @@
-type isFavourite = {
-  isFavourite: boolean;
+type HasId = {
+  id: number;
 };
 
 export type ProtoCharacterStructure = {
-  id: number;
+  image: string;
   name: string;
   status: string;
   species: string;
   type: string;
   gender: string;
   location: string;
+  isFavourite: boolean;
 };
 
-export type CharacterStructure = isFavourite & ProtoCharacterStructure;
+export type CharacterStructure = HasId & ProtoCharacterStructure;

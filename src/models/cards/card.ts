@@ -13,11 +13,13 @@ export class Card implements CardStructure {
 }
 
 export type DetailCardStructure = {
+  id: number;
   name: string;
-  img: string;
-  status: boolean;
+  image: string;
+  status: string;
   species: string;
   type: string;
   gender: string;
   location: string;
+  isFavourite: boolean;
 };
