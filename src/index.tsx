@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./components/app/App";
-import { AppContextProviderPrivate } from "./context private/context.provider.private";
-import { AppContextProvider } from "./context public/context.provider";
+import { AppContextProviderPrivate } from "./context/context private/context.provider.private";
+import { AppContextProvider } from "./context/context public/context.provider";
+
 import "./index.css";
 
 import reportWebVitals from "./reportWebVitals";
