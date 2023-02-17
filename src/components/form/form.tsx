@@ -7,11 +7,24 @@ import "./form.scss";
 import { AppContextPrivate } from "../../context private/context.private";
 
 export function Form({
-  char
+  char,
 }: {
-  char: CharacterStructure | ProtoCharacterStructure;
+  char: CharacterStructure | ProtoCharacterStructure | null;
 }) {
   const { updateChar, addChar } = useContext(AppContextPrivate);
+
+  const type = char === null ? "add" : "";
+  char === null &&
+    (char = {
+      image: "",
+      name: "",
+      status: "",
+      species: "",
+      type: "",
+      gender: "",
+      location: "",
+      isFavourite: true,
+    } as ProtoCharacterStructure);
 
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
@@ -27,26 +40,14 @@ export function Form({
       location: inputs[6].value,
       isFavourite: true,
     } as ProtoCharacterStructure;
-    const type = char === null ? "add" : "";
-    char === null &&
-      (char = {
-        image: "",
-        name: "",
-        status: "",
-        species: "",
-        type: "",
-        gender: "",
-        location: "",
-        isFavourite: true,
-      }as ProtoCharacterStructure);
 
     // console.log("add character", newCharacter);
     // addChar(newCharacter);
     if (type === "add") {
       addChar(newCharacter);
     } else {
-      newCharacter.id = char.id;
-      updateChar(newCharacter);
+      (newCharacter as CharacterStructure).id = (char as CharacterStructure).id;
+      updateChar(newCharacter as CharacterStructure);
     }
   };
 
@@ -63,27 +64,27 @@ export function Form({
       </div>
       <div className="form-line">
         <label htmlFor="">Name: </label>
-        <input type="text" placeholder="Rick" required />
+        <input type="text" placeholder="Rick" value={char.name} required />
       </div>
       <div className="form-line">
         <label htmlFor="">Status: </label>
-        <input type="text" placeholder="alive" required />
+        <input type="text" placeholder="alive" value={char.status} required />
       </div>
       <div className="form-line">
         <label htmlFor="">Species: </label>
-        <input type="text" placeholder="human" required />
+        <input type="text" placeholder="human" value={char.species} required />
       </div>
       <div className="form-line">
         <label htmlFor="">Type: </label>
-        <input type="text" placeholder="-" required />
+        <input type="text" placeholder="-" value={char.type} required />
       </div>
       <div className="form-line">
         <label htmlFor="">Gender: </label>
-        <input type="text" placeholder="male" required />
+        <input type="text" placeholder="male" value={char.gender} required />
       </div>
       <div className="form-line">
         <label htmlFor="">Location: </label>
-        <input type="text" placeholder="earth" required />
+        <input type="text" placeholder="earth" value={char.location} required />
       </div>
       <div className="button-div">
         <button type="submit">ADD</button>
