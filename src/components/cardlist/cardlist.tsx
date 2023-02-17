@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { AppContext } from "../../context/context";
+import { AppContext } from "../../context public/context";
 import { CharacterStructure } from "../../models/character/character";
 import { Card } from "../card/card";
 
