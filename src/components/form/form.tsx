@@ -58,33 +58,58 @@ export function Form({
         <input
           type="text"
           placeholder="https://www.example.png"
-          value={char.image}
+          defaultValue={char.image}
           required
         />
       </div>
       <div className="form-line">
         <label htmlFor="">Name: </label>
-        <input type="text" placeholder="Rick" value={char.name} required />
+        <input
+          type="text"
+          placeholder="Rick"
+          defaultValue={char.name}
+          required
+        />
       </div>
       <div className="form-line">
         <label htmlFor="">Status: </label>
-        <input type="text" placeholder="alive" value={char.status} required />
+        <input
+          type="text"
+          placeholder="alive"
+          defaultValue={char.status}
+          required
+        />
       </div>
       <div className="form-line">
         <label htmlFor="">Species: </label>
-        <input type="text" placeholder="human" value={char.species} required />
+        <input
+          type="text"
+          placeholder="human"
+          defaultValue={char.species}
+          required
+        />
       </div>
       <div className="form-line">
         <label htmlFor="">Type: </label>
-        <input type="text" placeholder="-" value={char.type} required />
+        <input type="text" placeholder="-" defaultValue={char.type} required />
       </div>
       <div className="form-line">
         <label htmlFor="">Gender: </label>
-        <input type="text" placeholder="male" value={char.gender} required />
+        <input
+          type="text"
+          placeholder="male"
+          defaultValue={char.gender}
+          required
+        />
       </div>
       <div className="form-line">
         <label htmlFor="">Location: </label>
-        <input type="text" placeholder="earth" value={char.location} required />
+        <input
+          type="text"
+          placeholder="earth"
+          defaultValue={char.location}
+          required
+        />
       </div>
       <div className="button-div">
         <button type="submit">ADD</button>
