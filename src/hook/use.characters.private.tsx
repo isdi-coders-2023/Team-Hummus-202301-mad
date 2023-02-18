@@ -1,8 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import {
-  CharacterStructure,
-  ProtoCharacterStructure,
-} from "../models/character/character";
+import { CharacterStructure } from "../models/character/character";
 import { CardApiRepo } from "../services/private.repo/card.api.repo";
 
 export type UseCharactersStructurePrivate = ReturnType<typeof useCharsPrivate>;
@@ -22,7 +19,7 @@ export function useCharsPrivate(repo: CardApiRepo) {
     }
   }, [repo]);
 
-  const addChar = async (char: ProtoCharacterStructure) => {
+  const addChar = async (char: CharacterStructure) => {
     try {
       const finalChar = await repo.createCard(char);
       setChars([...chars, finalChar]);
