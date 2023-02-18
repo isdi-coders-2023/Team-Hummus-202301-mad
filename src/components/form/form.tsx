@@ -1,10 +1,10 @@
-import { SyntheticEvent, useContext } from "react";
+
 import {
   CharacterStructure,
   ProtoCharacterStructure,
 } from "../../models/character/character";
 import "./form.scss";
-import { AppContextPrivate } from "../../context/context private/context.private";
+
 
 export function Form({
   char,
