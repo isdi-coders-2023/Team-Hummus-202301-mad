@@ -3,7 +3,7 @@ import { CharacterStructure } from "../../models/character/character";
 export interface CardApiRepoStructure {
   loadCards(): Promise<CharacterStructure>;
   getCard(): Promise<CharacterStructure>;
-  createCard(card: CharacterStructure): Promise<CharacterStructure>;
+  createCard(card: ProtoCharacterStructure): Promise<CharacterStructure>;
   updateCard(card: Partial<CharacterStructure>): Promise<CharacterStructure>;
   deleteCard(id: CharacterStructure["id"]): Promise<void>;
 }

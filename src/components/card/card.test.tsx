@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-render-in-setup */
 import { render, screen } from "@testing-library/react";
-import { AppContext } from "../../context/context";
+import { AppContext } from "../../context/context public/context";
 import { UseCharactersStructure } from "../../hook/use.characters";
 import { CardStructure } from "../../models/cards/card";
 import { Card } from "./card";

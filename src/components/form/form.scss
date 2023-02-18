@@ -1,0 +1,65 @@
+@import "../../variables.scss";
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-1;
+  .form-line {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.5rem 0rem;
+  }
+  input {
+    font-size: 1.2rem;
+    padding: 0.5rem 0rem;
+    border: none;
+    border-bottom: 1px solid #d5e56f;
+    color: #d5e56f;
+    background-color: $bg-color;
+    margin-bottom: 1rem;
+  }
+  button {
+    background-color: $logo-bg;
+    border: none;
+    padding: 1rem;
+    border-radius: 3rem;
+    margin: 3rem 0rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $bg-color;
+    width: 6rem;
+  }
+}
+
+@media (min-width: 600px) {
+  form {
+    padding: 2rem;
+    justify-content: left;
+    width: 32rem;
+    margin: 0;
+    input {
+      padding: 1rem 0rem;
+      width: 20rem;
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .form-line {
+      padding: 1rem 0rem;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-end;
+    }
+    .button-div {
+      display: flex;
+      justify-content: center;
+      button {
+        width: 10rem;
+      }
+    }
+  }
+}

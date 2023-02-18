@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { AppContext } from "../../context/context";
+import { AppContext } from "../../context/context public/context";
 import { CardStructure } from "../../models/cards/card";
 import "./card.scss";
 type CardProps = {
