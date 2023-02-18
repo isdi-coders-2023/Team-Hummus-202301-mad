@@ -1,4 +1,7 @@
-import { CharacterStructure } from "../../models/character/character";
+import {
+  CharacterStructure,
+  ProtoCharacterStructure,
+} from "../../models/character/character";
 
 export interface CardApiRepoStructure {
   loadCards(): Promise<CharacterStructure>;
