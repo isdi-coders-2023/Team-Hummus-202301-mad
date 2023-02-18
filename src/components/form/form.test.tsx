@@ -1,36 +1,11 @@
 /* eslint-disable testing-library/no-render-in-setup */
-import { act, fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { AppContextPrivate } from "../../context/context private/context.private";
 import { Form } from "./form";
 
 describe("Given the From component", () => {
   let elements: HTMLElement[];
-
-  beforeEach(() => {
-    // const mockValues = [
-    //   { value: "https://www.example.png" },
-    //   { value: "Rick" },
-    //   { value: "alive" },
-    //   { value: "human" },
-    //   { value: "-" },
-    //   { value: "male" },
-    //   { value: "earth" },
-    // ];
-    // const mockCharacter = {
-    //   id: 1,
-    //   image: "https://www.example.png",
-    //   name: "Rick",
-    //   status: "alive",
-    //   species: "human",
-    //   type: "",
-    //   gender: "male",
-    //   location: "earth",
-    //   isFavourite: false,
-    // };
-    // const mockNull = null;
-    // render(<Form char={mockCharacter} />);
-    // elements = [...screen.getAllByRole("textbox"), screen.getByRole("button")];
-  });
 
   describe("When we render it", () => {
     test("Then the form should appear on the screen", () => {
@@ -77,47 +52,64 @@ describe("Given the From component", () => {
     });
   });
 
-  describe("When we click the button", () => {
-    test("It calls the onSubmit function", async () => {
-      const mockCharacter = {
-        id: 1,
-        image: "https://www.example.png",
-        name: "Rick",
-        status: "alive",
-        species: "human",
-        type: "",
-        gender: "male",
-        location: "earth",
-        isFavourite: false,
-      };
-      const addChar = jest.fn();
+  describe("When the user clicks the submit button", () => {
+    const char1 = {
+      id: 1,
+      image: "https://www.example.png",
+      name: "Rick",
+      status: "alive",
+      species: "human",
+      type: "",
+      gender: "male",
+      location: "earth",
+      isFavourite: true,
+    };
 
-      render(<Form char={mockCharacter} />);
+    const char2 = null;
 
-      // fireEvent.submit(screen.getByTestId("form"));
-      userEvent.click(screen.getByRole("button"));
+    const mockAddChar = jest.fn();
+    const mockUpdateChar = jest.fn();
+    const mockloadChars = jest.fn();
+    const deleteChar = jest.fn();
 
-      // elements = [
-      //   ...screen.getAllByRole("textbox"),
-      //   screen.getByRole("button"),
-      // ];
+    const mockAppContext = {
+      chars: [],
+      loadChars: mockloadChars,
+      updateChar: mockUpdateChar,
+      addChar: mockAddChar,
+      deleteChar: deleteChar,
+    };
 
-      expect(addChar).toHaveBeenCalled();
+    test("calls addChar when submitted with a null character", () => {
+      const { getByPlaceholderText, getByText } = render(
+        <AppContextPrivate.Provider value={mockAppContext}>
+          <Form char={char2} />
+        </AppContextPrivate.Provider>
+      );
+
+      fireEvent.change(getByPlaceholderText("https://www.example.png"), {
+        target: { value: "https://www.example2.png" },
+      });
+
+      fireEvent.click(getByText("SUBMIT"));
+
+      expect(mockAddChar).toHaveBeenCalledTimes(1);
+    });
+
+    test("calls updateChar when submitted with a non-null character", () => {
+      const { getByPlaceholderText, getByText } = render(
+        <AppContextPrivate.Provider value={mockAppContext}>
+          <Form char={char1} />
+        </AppContextPrivate.Provider>
+      );
+
+      fireEvent.change(getByPlaceholderText("https://www.example.png"), {
+        target: { value: "https://www.example2.png" },
+      });
+
+      fireEvent.click(getByText("SUBMIT"));
+
+      expect(mockUpdateChar).toHaveBeenCalledTimes(1);
     });
   });
 });
-/* Este ultimo test no funciona
-
-  describe("When the user submits the form...", () => {
-    test("it calls updateChar()", () => {
-      const updateChar = jest.fn();
-      // userEvent.click(screen.getByRole("button"));
-      const form = screen.getByTestId("form");
-      fireEvent.submit(form);
-
-      expect(updateChar).toHaveBeenCalled();
-    });
-  });
-});
-
-*/
