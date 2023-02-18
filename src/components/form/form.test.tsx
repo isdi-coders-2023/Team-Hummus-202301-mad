@@ -118,7 +118,7 @@ describe("Given the From component", () => {
     });
   });
 });
- Este ultimo test no funciona
+  Este ultimo test no funciona
 
   describe("When the user submits the form...", () => {
     test("it calls updateChar()", () => {

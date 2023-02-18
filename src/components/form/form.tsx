@@ -6,10 +6,15 @@ import {
 import "./form.scss";
 import { AppContextPrivate } from "../../context/context private/context.private";
 
-export function Form({ char, onSubmit }: { char: CharacterStructure | ProtoCharacterStructure | null, onSubmit: any }) {
+export function Form({
+  char,
+  onSubmit,
+}: {
+  char: CharacterStructure | ProtoCharacterStructure | null;
+  onSubmit: any;
+}) {
   // const { updateChar, addChar } = useContext(AppContextPrivate);
 
-  const type = char === null ? "add" : "";
   char === null &&
     (char = {
       image: "",
@@ -43,10 +48,9 @@ export function Form({ char, onSubmit }: { char: CharacterStructure | ProtoChara
   //     (newCharacter as CharacterStructure).id = (char as CharacterStructure).id;
   //     updateChar(newCharacter as CharacterStructure);
   //   }
-  };
 
   return (
-    <form action="" onSubmit={handleSubmit} id="form" data-testid="form">
+    <form action="" id="form" data-testid="form">
       <div className="form-line">
         <label htmlFor="">Image url: </label>
         <input
