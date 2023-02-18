@@ -6,11 +6,7 @@ import {
 import "./form.scss";
 import { AppContextPrivate } from "../../context/context private/context.private";
 
-export function Form({
-  char,
-}: {
-  char: CharacterStructure | ProtoCharacterStructure | null;
-}) {
+export function Form({ char, onSubmit }: { char: CharacterStructure | ProtoCharacterStructure | null, onSubmit: any }) {
   const { updateChar, addChar } = useContext(AppContextPrivate);
 
   const type = char === null ? "add" : "";
@@ -45,7 +41,7 @@ export function Form({
       addChar(newCharacter);
     } else {
       (newCharacter as CharacterStructure).id = (char as CharacterStructure).id;
-      updateChar] (newCharacter as CharacterStructure);
+      updateChar(newCharacter as CharacterStructure);
     }
   };
 
@@ -110,7 +106,7 @@ export function Form({
         />
       </div>
       <div className="button-div">
-        <button type="submit">ADD</button>
+        <button type="submit">SUBMIT</button>
       </div>
     </form>
   );
