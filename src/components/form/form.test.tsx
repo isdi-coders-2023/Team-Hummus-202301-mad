@@ -81,33 +81,33 @@ describe("Given the From component", () => {
     };
 
     test("calls addChar when submitted with a null character", () => {
-      const { getByPlaceholderText, getByText } = render(
+      render(
         <AppContextPrivate.Provider value={mockAppContext}>
           <Form char={char2} />
         </AppContextPrivate.Provider>
       );
 
-      fireEvent.change(getByPlaceholderText("https://www.example.png"), {
+      fireEvent.change(screen.getByPlaceholderText("https://www.example.png"), {
         target: { value: "https://www.example2.png" },
       });
 
-      fireEvent.click(getByText("SUBMIT"));
+      fireEvent.click(screen.getByText("SUBMIT"));
 
       expect(mockAddChar).toHaveBeenCalledTimes(1);
     });
 
     test("calls updateChar when submitted with a non-null character", () => {
-      const { getByPlaceholderText, getByText } = render(
+      render(
         <AppContextPrivate.Provider value={mockAppContext}>
           <Form char={char1} />
         </AppContextPrivate.Provider>
       );
 
-      fireEvent.change(getByPlaceholderText("https://www.example.png"), {
+      fireEvent.change(screen.getByPlaceholderText("https://www.example.png"), {
         target: { value: "https://www.example2.png" },
       });
 
-      fireEvent.click(getByText("SUBMIT"));
+      fireEvent.click(screen.getByText("SUBMIT"));
 
       expect(mockUpdateChar).toHaveBeenCalledTimes(1);
     });
