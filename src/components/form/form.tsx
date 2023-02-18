@@ -24,13 +24,13 @@ export function Form({
       gender: "",
       location: "",
       isFavourite: true,
-    } as ProtoCharacterStructure);
+    } as CharacterStructure);
 
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const inputs = form.querySelectorAll("input");
-    const newCharacter: ProtoCharacterStructure | CharacterStructure = {
+    const newCharacter: CharacterStructure = {
       image: inputs[0].value,
       name: inputs[1].value,
       status: inputs[2].value,
@@ -39,7 +39,7 @@ export function Form({
       gender: inputs[5].value,
       location: inputs[6].value,
       isFavourite: true,
-    } as ProtoCharacterStructure;
+    } as CharacterStructure;
 
     // console.log("add character", newCharacter);
     // addChar(newCharacter);
