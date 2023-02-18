@@ -7,12 +7,10 @@ type CardProps = {
 export const Detail = ({ char }: CardProps) => {
   return (
     <section className="detail">
-      <div className="detail-img">
+      <div className="detail-div">
         <img src={char.image} alt="Character_Image" />
-      </div>
-      <div>
         <h2 className="detail-title">{char.name}.</h2>
-        <ul>
+        <ul className="detail-list">
           <li className="detail-title__li">{char.id}</li>
           <li className="detail-title__li">{char.name}</li>
           <li className="detail-title__li">{char.status}</li>
