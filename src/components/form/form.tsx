@@ -12,6 +12,7 @@ export function Form({
   char: CharacterStructure | ProtoCharacterStructure | null;
 }) {
   const { updateChar, addChar } = useContext(AppContextPrivate);
+
   const type = char === null ? "add" : "";
   char === null &&
     (char = {
@@ -24,11 +25,6 @@ export function Form({
       location: "",
       isFavourite: true,
     } as ProtoCharacterStructure);
-
-    const handleSubmit='Para que no chille el handle submit'
-
-/* Este codigo lo dejo comentado para que no chillen los tests y podais hacer el pull
-
 
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
@@ -49,10 +45,9 @@ export function Form({
       addChar(newCharacter);
     } else {
       (newCharacter as CharacterStructure).id = (char as CharacterStructure).id;
-      updateChar(newCharacter as CharacterStructure);
+      updateChar] (newCharacter as CharacterStructure);
     }
   };
-*/
 
   return (
     <form action="" onSubmit={handleSubmit} id="form" data-testid="form">
