@@ -6,6 +6,11 @@
   display: none;
   list-style: none;
   color: white;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 @media (max-width: 600px) {

@@ -8,9 +8,9 @@ import "./cardlist.scss";
 export function CharacterList() {
   const { chars } = useContext(AppContext);
 
-  /*  useEffect(() => {
+  useEffect(() => {
     loadChars();
-  }, [loadChars]); */
+  }, [loadChars]);
 
   return (
     <section className="character-list">
