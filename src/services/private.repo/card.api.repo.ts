@@ -1,12 +1,9 @@
-import {
-  ProtoCharacterStructure,
-  CharacterStructure,
-} from "../../models/character/character";
+import { CharacterStructure } from "../../models/character/character";
 
 export interface CardApiRepoStructure {
-  loadCards(): Promise<ProtoCharacterStructure>;
-  getCard(): Promise<ProtoCharacterStructure>;
-  createCard(card: ProtoCharacterStructure): Promise<CharacterStructure>;
+  loadCards(): Promise<CharacterStructure>;
+  getCard(): Promise<CharacterStructure>;
+  createCard(card: CharacterStructure): Promise<CharacterStructure>;
   updateCard(card: Partial<CharacterStructure>): Promise<CharacterStructure>;
   deleteCard(id: CharacterStructure["id"]): Promise<void>;
 }
@@ -30,7 +27,7 @@ export class CardApiRepo {
     return data;
   }
 
-  async createCard(card: ProtoCharacterStructure): Promise<CharacterStructure> {
+  async createCard(card: CharacterStructure): Promise<CharacterStructure> {
     const resp = await fetch(this.url, {
       method: "POST",
       body: JSON.stringify(card),

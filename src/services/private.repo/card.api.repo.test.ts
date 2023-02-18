@@ -5,6 +5,7 @@ const mockCard: CharacterStructure[] = [
   {
     id: 0,
     name: "a",
+    image: "",
     status: "",
     species: "",
     type: "",
@@ -15,6 +16,7 @@ const mockCard: CharacterStructure[] = [
   {
     id: 1,
     name: "b",
+    image: "",
     status: "",
     species: "",
     type: "",
