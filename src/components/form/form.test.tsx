@@ -1,6 +1,5 @@
 /* eslint-disable testing-library/no-render-in-setup */
-
-import { render, screen } from "@testing-library/react";
+import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Form } from "./form";
 
@@ -35,9 +34,8 @@ describe("Given the From component", () => {
 
   describe("When we render it", () => {
     test("Then the form should appear on the screen", () => {
-      const handleSubmit = jest.fn();
       const mockCharacter = null;
-      render(<Form char={mockCharacter} onSubmit={handleSubmit} />);
+      render(<Form char={mockCharacter} />);
       const element = screen.getByText(/image url/i);
       expect(element).toBeInTheDocument();
     });
@@ -46,7 +44,6 @@ describe("Given the From component", () => {
   describe("When the user writes in all the inputs", () => {
     test("Then they should appear in the screen", () => {
       const mockCharacter = null;
-      const handleSubmit = jest.fn();
       const mockValues = [
         { value: "https://www.example.png" },
         { value: "Rick" },
@@ -57,8 +54,7 @@ describe("Given the From component", () => {
         { value: "earth" },
       ];
 
-      render(<Form char={mockCharacter} onSubmit={handleSubmit} />);
-
+      render(<Form char={mockCharacter} />);
       elements = [
         ...screen.getAllByRole("textbox"),
         screen.getByRole("button"),
@@ -81,7 +77,6 @@ describe("Given the From component", () => {
     });
   });
 
-  /*
   describe("When we click the button", () => {
     test("It calls the onSubmit function", async () => {
       const mockCharacter = {
@@ -95,30 +90,23 @@ describe("Given the From component", () => {
         location: "earth",
         isFavourite: false,
       };
-      const mockOnSubmit = jest.fn();
+      const addChar = jest.fn();
 
       render(<Form char={mockCharacter} />);
 
-      fireEvent.submit(screen.getByTestId("form"));
+      // fireEvent.submit(screen.getByTestId("form"));
+      userEvent.click(screen.getByRole("button"));
 
-      elements = [
-        ...screen.getAllByRole("textbox"),
-        screen.getByRole("button"),
-      ];
+      // elements = [
+      //   ...screen.getAllByRole("textbox"),
+      //   screen.getByRole("button"),
+      // ];
 
-      // await act(async () => {
-      //   fireEvent.change(elements[0], { target: { value: "email" } });
-      // });
-
-      // await act(async () => {
-      //   userEvent.click(elements[7]);
-      // });
-
-      expect(mockOnSubmit).toHaveBeenCalled();
+      expect(addChar).toHaveBeenCalled();
     });
   });
 });
-  Este ultimo test no funciona
+/* Este ultimo test no funciona
 
   describe("When the user submits the form...", () => {
     test("it calls updateChar()", () => {
@@ -130,5 +118,6 @@ describe("Given the From component", () => {
       expect(updateChar).toHaveBeenCalled();
     });
   });
-  */
 });
+
+*/
