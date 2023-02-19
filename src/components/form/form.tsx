@@ -41,18 +41,17 @@ export function Form({
       isFavourite: true,
     } as CharacterStructure;
 
-    // console.log("add character", newCharacter);
-    // addChar(newCharacter);
     if (type === "add") {
       addChar(newCharacter);
     } else {
       (newCharacter as CharacterStructure).id = (char as CharacterStructure).id;
       updateChar(newCharacter as CharacterStructure);
     }
+
   };
 
   return (
-    <form action="" onSubmit={handleSubmit} id="form">
+    <form action="" onSubmit={handleSubmit} id="form" data-testid="form">
       <div className="form-line">
         <label htmlFor="">Image url: </label>
         <input
@@ -112,7 +111,7 @@ export function Form({
         />
       </div>
       <div className="button-div">
-        <button type="submit">ADD</button>
+        <button type="submit">SUBMIT</button>
       </div>
     </form>
   );
