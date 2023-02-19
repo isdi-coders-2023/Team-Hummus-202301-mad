@@ -1,6 +1,6 @@
 import {
-  CharacterStructure,
   ProtoCharacterStructure,
+  CharacterStructure,
 } from "../../models/character/character";
 
 export interface CardApiRepoStructure {
