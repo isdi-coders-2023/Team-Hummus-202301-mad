@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { CharacterList } from "./cardlist";
 
-jest.mock("../card/card");
+jest.mock("../card/card.tsx");
 
 describe("Given a character list", () => {
   describe("when it is rendered", () => {
