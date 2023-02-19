@@ -1,0 +1,13 @@
+@import "../../variables.scss";
+
+.edit-div {
+  padding: $m-padding;
+  h2 {
+    padding: 2rem 0rem;
+    color: #d5e56f;
+    font-family: $font-1;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+  }
+}

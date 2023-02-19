@@ -1,4 +1,5 @@
 import { CardStructure } from "../models/cards/card";
+import { CharacterStructure } from "../models/character/character";
 
 export const MOCK_Cards: CardStructure[] = [
   {
@@ -20,3 +21,15 @@ export const MOCK_Cards: CardStructure[] = [
     isFavourite: true,
   },
 ];
+
+export const MOCK_Characters: CharacterStructure = {
+  id: 0,
+  image: "",
+  name: "",
+  status: "",
+  species: "",
+  type: "",
+  gender: "",
+  location: "",
+  isFavourite: false,
+};

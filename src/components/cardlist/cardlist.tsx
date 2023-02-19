@@ -1,12 +1,12 @@
-import { useContext, useEffect } from "react";
-import { AppContext } from "../../context/context";
+import { useContext } from "react";
+import { AppContext } from "../../context/context public/context";
 import { CharacterStructure } from "../../models/character/character";
 import { Card } from "../card/card";
 
 import "./cardlist.scss";
 
 export function CharacterList() {
-  const { chars, loadChars } = useContext(AppContext);
+  const { chars } = useContext(AppContext);
 
   useEffect(() => {
     loadChars();

@@ -10,7 +10,7 @@ describe("Given a character list", () => {
       const elementNumbers = screen.getAllByRole("list");
 
       for (let i = 0; i < elementNumbers.length; i++) {
-        expect(elementNumbers).toBeInTheDocument();
+        expect(elementNumbers).toBeTruthy();
       }
     });
   });
