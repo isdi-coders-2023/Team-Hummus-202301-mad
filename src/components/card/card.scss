@@ -14,11 +14,13 @@
 
   &__img {
     width: 8rem;
+    min-height: 8rem;
     border-radius: 0.5rem 0.5rem 0 0;
     border-bottom: 1px solid black;
 
     @media (min-width: 600px) {
       width: 10rem;
+      min-height: 10rem;
     }
   }
 
