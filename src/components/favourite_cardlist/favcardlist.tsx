@@ -1,12 +1,16 @@
-import { useContext } from "react";
-import { AppContext } from "../../context/context public/context";
+import { useContext, useEffect } from "react";
+import { AppContextPrivate } from "../../context/context private/context.private";
 import { CharacterStructure } from "../../models/character/character";
 import { Card } from "../card/card";
 
-import "./cardlist.scss";
+import "./favcardlist.scss";
 
-export function CharacterList() {
-  const { chars } = useContext(AppContext);
+export function FavCharacterList() {
+  const { chars, loadChars } = useContext(AppContextPrivate);
+
+  useEffect(() => {
+    loadChars();
+  }, [loadChars]);
 
   return (
     <section className="character-list">

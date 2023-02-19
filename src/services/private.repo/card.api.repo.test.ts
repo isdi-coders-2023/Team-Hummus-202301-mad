@@ -4,8 +4,8 @@ import { CardApiRepo } from "./card.api.repo";
 const mockCard: CharacterStructure[] = [
   {
     id: 0,
-    image: "a",
     name: "a",
+    image: "",
     status: "",
     species: "",
     type: "",
@@ -15,8 +15,8 @@ const mockCard: CharacterStructure[] = [
   },
   {
     id: 1,
-    image: "a",
     name: "b",
+    image: "",
     status: "",
     species: "",
     type: "",

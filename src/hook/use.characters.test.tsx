@@ -1,7 +1,6 @@
 /* eslint-disable testing-library/no-unnecessary-act */
 /* eslint-disable testing-library/no-render-in-setup */
 import { CharacterApiRepo } from "../services/public.repo/character.api.repo";
-import { useChars } from "./use.characters";
 import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
@@ -69,3 +68,6 @@ describe("Given the useChars cstomHook and the testError component", () => {
     });
   });
 });
+function useChars(mockRepo: CharacterApiRepo): { loadChars: any } {
+  throw new Error("Function not implemented.");
+}

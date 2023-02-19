@@ -10,9 +10,14 @@ export function Navbar({ menuOptions }: NavProps) {
       <img className="burger-menu" src="/img/menu.png" alt="" />
       <ul className="navbar-list">
         {menuOptions.map((item) => (
-          <li key={item.label} className="navbar-list__home">
-            <a href={item.path}>{item.label}</a>
-          </li>
+          <a href={item.path}>
+            <li
+              key={item.label}
+              className={`navbar-list__${item.label.toLocaleLowerCase()} navbar-list__item`}
+            >
+              {item.label}
+            </li>
+          </a>
         ))}
       </ul>
     </nav>

@@ -30,7 +30,7 @@ export class CardApiRepo {
     return data;
   }
 
-  async createCard(card: ProtoCharacterStructure): Promise<CharacterStructure> {
+  async createCard(card: CharacterStructure): Promise<CharacterStructure> {
     const resp = await fetch(this.url, {
       method: "POST",
       body: JSON.stringify(card),
