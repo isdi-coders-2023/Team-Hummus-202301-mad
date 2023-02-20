@@ -23,7 +23,7 @@ describe("Given the useCharsPrivate customHook", () => {
       species: "",
       type: "",
       gender: "",
-      location: "",
+      location: { name: "" },
       isFavourite: false,
     };
 

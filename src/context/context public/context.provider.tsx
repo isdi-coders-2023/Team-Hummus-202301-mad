@@ -6,6 +6,5 @@ import { AppContext } from "./context";
 export function AppContextProvider({ children }: { children: JSX.Element }) {
   const charsRepoPublic = useMemo(() => new CharacterApiRepo(), []);
   const context = useChars(charsRepoPublic);
-
   return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
 }

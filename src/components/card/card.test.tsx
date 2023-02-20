@@ -2,13 +2,20 @@
 import { render, screen } from "@testing-library/react";
 import { AppContext } from "../../context/context public/context";
 import { UseCharactersStructure } from "../../hook/use.characters";
-import { CardStructure } from "../../models/cards/card";
+import { CharacterStructure } from "../../models/character/character";
 import { Card } from "./card";
 
-const mockCard: CardStructure = {
-  name: "joaquin",
-  char: "string",
-} as unknown as CardStructure;
+export const mockCard: CharacterStructure = {
+  id: 0,
+  image: "",
+  name: "",
+  status: "",
+  species: "",
+  type: "",
+  gender: "",
+  location: { name: "" },
+  isFavourite: false,
+};
 
 const mockContext = {
   loadChars: jest.fn(),

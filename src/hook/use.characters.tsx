@@ -23,8 +23,21 @@ export function useChars(repo: CharacterApiRepo) {
     loadChars();
   }, [loadChars]);
 
+  const getChars = useCallback(
+    async (input: string | number) => {
+      try {
+        const chars = await repo.getChars(input);
+        setChars(chars);
+      } catch (error) {
+        handlerError(error as Error);
+      }
+    },
+    [repo]
+  );
+
   return {
     chars,
     loadChars,
+    getChars,
   };
 }

@@ -22,7 +22,7 @@ export function Form({
       species: "",
       type: "",
       gender: "",
-      location: "",
+      location: { name: "" },
       isFavourite: true,
     } as ProtoCharacterStructure);
 
@@ -37,7 +37,7 @@ export function Form({
       species: inputs[3].value,
       type: inputs[4].value,
       gender: inputs[5].value,
-      location: inputs[6].value,
+      location: inputs[6].name.valueOf,
       isFavourite: true,
     } as ProtoCharacterStructure;
 
@@ -47,7 +47,6 @@ export function Form({
       (newCharacter as CharacterStructure).id = (char as CharacterStructure).id;
       updateChar(newCharacter as CharacterStructure);
     }
-
   };
 
   return (
@@ -106,7 +105,7 @@ export function Form({
         <input
           type="text"
           placeholder="earth"
-          defaultValue={char.location}
+          defaultValue={char.location.name}
           required
         />
       </div>

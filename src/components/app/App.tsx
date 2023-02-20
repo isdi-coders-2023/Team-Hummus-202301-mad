@@ -3,6 +3,7 @@ import { Header } from "../header/header";
 import { AppRouter } from "../app.router/app.router";
 import "./App.scss";
 import { Navbar } from "../navbar/navbar";
+import React from "react";
 
 export type MenuOption = {
   label: string;
@@ -14,8 +15,6 @@ export const menuOptions: MenuOption[] = [
   { label: "About", path: "/about" },
   { label: "How to", path: "/howto" },
   { label: "Favourites", path: "/favourites" },
-  { label: "Add", path: "/add" },
-  { label: "Detail", path: "/detail" },
 ];
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
         <Navbar menuOptions={menuOptions}></Navbar>
       </Header>
       <AppRouter menuOptions={menuOptions}></AppRouter>
-
       <Footer></Footer>
     </div>
   );

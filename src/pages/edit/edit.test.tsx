@@ -13,7 +13,7 @@ describe("Given the Edit component", () => {
         species: "",
         type: "",
         gender: "",
-        location: "",
+        location: { name: "" },
         isFavourite: false,
       };
       render(<Edit char={mock}></Edit>);
