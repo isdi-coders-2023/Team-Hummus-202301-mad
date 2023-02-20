@@ -1,8 +1,8 @@
 import { CharacterStructure } from "../../models/character/character";
 
 export interface CharacterApiRepoStructure {
-  loadCards(): Promise<CharacterStructure>;
-  getCard(): Promise<CharacterStructure>;
+  loadChars(): Promise<CharacterStructure>;
+  getChars(): Promise<CharacterStructure>;
 }
 
 export class CharacterApiRepo {
@@ -13,14 +13,18 @@ export class CharacterApiRepo {
 
   async loadChars(): Promise<CharacterStructure[]> {
     const resp = await fetch(this.url);
+    if (!resp.ok) throw new Error("Fetch failed");
     const data = await resp.json();
     return data.results;
   }
 
-  async getChars(input: string) {
-    const url = this.url + "/?" + input;
+  async getChars(input: string | number) {
+    const url = this.url + "/" + input;
     const resp = await fetch(url);
+    if (!resp.ok) throw new Error("Fetch failed");
     const data = await resp.json();
-    return data.results;
+    return data;
   }
 }
+
+
