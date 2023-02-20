@@ -1,8 +1,7 @@
+import React from "react";
 import { Detail } from "../../components/detail/detail";
-import { MOCK_Characters } from "../../mocks/cards";
 
 export default function DetailPage() {
-  return <Detail char={MOCK_Characters}></Detail>;
+  return <Detail></Detail>;
 }
 
-// Ojo que char debe llamar al character seleccionado de la API. No al MOCK.

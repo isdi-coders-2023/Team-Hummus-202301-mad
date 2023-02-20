@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 import { AppContext } from "../../context/context public/context";
 import { CharacterStructure } from "../../models/character/character";
@@ -7,10 +8,6 @@ import "./cardlist.scss";
 
 export function CharacterList() {
   const { chars } = useContext(AppContext);
-
-  /*  useEffect(() => {
-    loadChars();
-  }, [loadChars]); */
 
   return (
     <section className="character-list">
