@@ -25,7 +25,7 @@ export function AppRouter({ menuOptions }: AppRouterProps) {
           element={<Favourites></Favourites>}
         ></Route>
         <Route path="/add" element={<Add></Add>}></Route>
-        <Route path="/detail" element={<Detail></Detail>}></Route>
+        <Route path="/detail/:id" element={<Detail></Detail>}></Route>
       </Routes>
     </Suspense>
   );
