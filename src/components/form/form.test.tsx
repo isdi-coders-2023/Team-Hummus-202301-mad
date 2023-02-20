@@ -61,7 +61,7 @@ describe("Given the From component", () => {
       species: "human",
       type: "",
       gender: "male",
-      location: "earth",
+      location: { name: "earth" },
       isFavourite: true,
     };
 

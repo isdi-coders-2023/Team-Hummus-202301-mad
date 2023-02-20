@@ -9,7 +9,7 @@ export type ProtoCharacterStructure = {
   species: string;
   type: string;
   gender: string;
-  location: string;
+  location: { name: string };
   isFavourite: boolean;
 };
 

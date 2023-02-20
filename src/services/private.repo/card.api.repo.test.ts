@@ -10,7 +10,7 @@ const mockCard: CharacterStructure[] = [
     species: "",
     type: "",
     gender: "",
-    location: "",
+    location: { name: "" },
     isFavourite: false,
   },
   {
@@ -21,7 +21,7 @@ const mockCard: CharacterStructure[] = [
     species: "",
     type: "",
     gender: "",
-    location: "",
+    location: { name: "" },
     isFavourite: false,
   },
 ];

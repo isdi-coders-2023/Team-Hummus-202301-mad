@@ -27,6 +27,6 @@ export const MOCK_Characters: CharacterStructure = {
   species: "",
   type: "",
   gender: "",
-  location: "",
+  location: { name: "" },
   isFavourite: false,
 };
