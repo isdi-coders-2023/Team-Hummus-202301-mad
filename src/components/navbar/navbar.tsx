@@ -1,5 +1,6 @@
 import "./navbar.scss";
 import { MenuOption } from "../app/App";
+import React from "react";
 
 type NavProps = {
   menuOptions: MenuOption[];
